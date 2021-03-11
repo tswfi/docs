@@ -168,10 +168,10 @@ For example PrestaShop 1.</description>
     
     <item>
       <title>Module base creation</title>
-      <link>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-view-page-new-hooks/module-base/</link>
+      <link>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-pages-new-hooks/module-base/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-view-page-new-hooks/module-base/</guid>
+      <guid>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-pages-new-hooks/module-base/</guid>
       <description>Module base creation Composer autoloading Let&amp;rsquo;s create module folder demovieworderhooks inside modules directory (located in the root of PrestaShop project). Then create composer.json in the root of the module to autoload classes with the namespaces (PrestaShop\Module\DemoViewOrderHooks\) we define from the src folder (https://getcomposer.org/doc/01-basic-usage.md#autoloading). Using composer PSR-4 autoload helps us autoload classes without the need to use require_once __DIR__.&#39;/vendor/autoload.php&#39;; .
 Even though using autoload block in composer.json helps us to autoload classes from the specified folder src with the namespace PrestaShop\\Module\\DemoViewOrderHooks\\ we might have some autoloading issues if we use our classes in our module main file demovieworderhooks.</description>
     </item>
@@ -405,10 +405,10 @@ Scope of maintainance When a minor version is released, such as PrestaShop 1.7.7
     
     <item>
       <title>Signature card</title>
-      <link>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-view-page-new-hooks/signature-widget/</link>
+      <link>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-pages-new-hooks/signature-widget/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-view-page-new-hooks/signature-widget/</guid>
+      <guid>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-pages-new-hooks/signature-widget/</guid>
       <description>Signature card displayAdminOrderSide hook We use this hook to display scanned customer signature.
 Lets create custom repository OrderSignatureRepository class inside demovieworderhooks/src/Repository folder. Symfony Repository classes (https://symfony.com/doc/3.3/doctrine/repository.html) help to interact with the database by providing frequently used functions like findOneBy to get the data (for example filtered data by a certain criteria - orderId field from OrderSignature entity).
 &amp;lt;?php /** * Copyright since 2007 PrestaShop SA and Contributors * PrestaShop is an International Registered Trademark &amp;amp; Property of PrestaShop SA * * NOTICE OF LICENSE * * This source file is subject to the Academic Free License version 3.</description>
@@ -438,10 +438,10 @@ Accessing /api/ The quickest way to test your API is to use your browser:
     
     <item>
       <title>Additional action buttons</title>
-      <link>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-view-page-new-hooks/additional-action-buttons/</link>
+      <link>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-pages-new-hooks/additional-action-buttons/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-view-page-new-hooks/additional-action-buttons/</guid>
+      <guid>https://devdocs.prestashop.com/1.7/modules/sample-modules/order-pages-new-hooks/additional-action-buttons/</guid>
       <description>Additional buttons in the main buttons bar actionGetAdminOrderButtons hook demo We use this hook to display additional action buttons into the main buttons bar.
 Let&amp;rsquo;s add hook related code to main module class demovieworderhooks:
 &amp;lt;?php /** * Add buttons to main buttons bar */ public function hookActionGetAdminOrderButtons(array $params) { $order = new Order($params[&amp;#39;id_order&amp;#39;]); /** @var \Symfony\Bundle\FrameworkBundle\Routing\Router $router */ $router = $this-&amp;gt;get(&amp;#39;router&amp;#39;); /** @var \PrestaShopBundle\Controller\Admin\Sell\Order\ActionsBarButtonsCollection $bar */ $bar = $params[&amp;#39;actions_bar_buttons_collection&amp;#39;]; $viewCustomerUrl = $router-&amp;gt;generate(&amp;#39;admin_customers_view&amp;#39;, [&amp;#39;customerId&amp;#39;=&amp;gt; (int)$order-&amp;gt;id_customer]); $bar-&amp;gt;add( new \PrestaShopBundle\Controller\Admin\Sell\Order\ActionsBarButton( &amp;#39;btn-secondary&amp;#39;, [&amp;#39;href&amp;#39; =&amp;gt; $viewCustomerUrl], &amp;#39;View customer&amp;#39; ) ); $bar-&amp;gt;add( new \PrestaShopBundle\Controller\Admin\Sell\Order\ActionsBarButton( &amp;#39;btn-info&amp;#39;, [&amp;#39;href&amp;#39; =&amp;gt; &amp;#39;https://www.</description>
@@ -887,6 +887,17 @@ We will give you all the details you may need to run an upgrade, but we can’t 
     </item>
     
     <item>
+      <title>How to become a maintainer</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/how-to-become-a-maintainer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/how-to-become-a-maintainer/</guid>
+      <description>How to become a maintainer In the PrestaShop project, maintainers are contributors with merge rights.
+The maintainer status is a position of great power, but it also carries great responsibility. As gatekeepers to the project&amp;rsquo;s code, maintainers are ultimately responsible for every contribution that is included in the project.
+Requirements to become a maintainer  Active participation in the project  Display a record of several accepted, quality Pull Requests having received little or no objections from maintainers.</description>
+    </item>
+    
+    <item>
       <title>How to create an Empty state</title>
       <link>https://devdocs.prestashop.com/1.7/development/components/grid/tutorials/create-empty-state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -952,6 +963,16 @@ Fill all fields and validate your account request, then follow the different ste
     </item>
     
     <item>
+      <title>HtmlColumn reference</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/html/</guid>
+      <description>HtmlColumn Type  Displays raw data without any escaping. Can be used to display HTML in grid.
+Available options    Properties Type Expected value     field string required The record field name that the column displays.    Example usage &amp;lt;?php use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\HtmlColumn; use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection; $htmlColumn = new HtmlColumn(&amp;#39;description&amp;#39;); $htmlColumn-&amp;gt;setName(&amp;#39;Description&amp;#39;); $htmlColumn-&amp;gt;setOptions([ &amp;#39;field&amp;#39; =&amp;gt; &amp;#39;description&amp;#39;, ]); $columns = new ColumnCollection(); $columns-&amp;gt;add($htmlColumn); </description>
+    </item>
+    
+    <item>
       <title>ImageColumn reference</title>
       <link>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -990,6 +1011,19 @@ Available options    Properties Type Expected value     field string required Th
 Different kind of pages Back-Office pages can be classified in four categories:
  Configuration / Settings Form pages  These pages allow the user to modify configuration settings in PrestaShop.
 Listing pages  These pages allow the user to browse PrestaShop content using listings.</description>
+    </item>
+    
+    <item>
+      <title>Preliminary tasks</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/preliminary-tasks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/preliminary-tasks/</guid>
+      <description>Preliminary tasks Before you can start your build, you must make sure that the project is ready to be built.
+1. Create the new version in Addons Marketplace and update native module compatibility This step requires special rights.
+Ask a maintainer from the PrestaShop Company with administrative rights on the Addons Marketplace to perform this step.
+ This only needs to be done once per release.
+(i.e. if done for a beta, it doesn&amp;rsquo;t need to be performed again for the final release).</description>
     </item>
     
     <item>
@@ -1148,6 +1182,17 @@ Available options    Properties Type Expected value     bulk_field string requir
     </item>
     
     <item>
+      <title>Create the build</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/create-build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/create-build/</guid>
+      <description>Create a build package Once preliminary tasks have been completed, the project is ready to be built.
+1. Communicate Starting this step means that the Development phase of this release is over. Before you go further, make sure to tick the &amp;ldquo;Development&amp;rdquo; box in the Release Tracker GitHub issue (there is one per version, see the 1.7.6.6 example).
+2. Create a local branch for your build The following tasks will require you to perform changes and submit them as a Pull Request.</description>
+    </item>
+    
+    <item>
       <title>CRUD Forms</title>
       <link>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/forms/crud-forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1264,6 +1309,18 @@ Available options    Properties Type Expected value     id_field string required
       <guid>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/forms/settings-forms/</guid>
       <description>Settings Forms Introduction In PrestaShop, there are a lots of settings forms that require a unified way to handle of them. To move the settings creation and update out of controllers the following components are being used:
  Form Data Provider - responsible for options data retrieval and saving the data. Form Handler - responsible for building the form.  Form Data Providers In order to load existing data into the form (when editing, for instance) and save the form data (when the form is submitted), you need to create and register a Form Data Provider.</description>
+    </item>
+    
+    <item>
+      <title>Summary of how GitHub Issues and Pull Requests are processed</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/summary-github-lifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/summary-github-lifecycle/</guid>
+      <description>Summary of how GitHub Issues and Pull Requests are processed GitHub is the main tool used by maintainers to manage the PrestaShop project.
+This page quickly describes how Issues and Pull Requests are processed on GitHub.
+The teams On GitHub, there are mainly three teams working together on the project.
+ Product Team: this team takes care of the product vision of the software. It has Product Managers, UX Designers and Wording Managers.</description>
     </item>
     
     <item>
@@ -1402,7 +1459,29 @@ The notification messages are not hard-coded in the template files, but are sent
       <guid>https://devdocs.prestashop.com/1.7/webservice/reference/</guid>
       <description>Web service reference All webservice APIs are accessible through the /api/ gateway. For instance, http://example.com/api/carriers
 Available HTTP methods Most resources can be accessed in a REST manner, with the 5 main HTTP request methods: GET, POST, PUT, DELETE, HEAD. The only exceptions are:
-   Key GET POST PUT DELETE HEAD     search X    X   stock_availables X X   X   stock_movements X    X   stocks X    X   supply_order_details X    X   supply_order_histories X    X   supply_order_receipt_histories X    X   supply_order_states X    X   supply_orders X    X   warehouse_product_locations X    X   warehouses X X X  X    All resources have two schemas that are accessible via a parameter:</description>
+   Key GET POST PUT DELETE HEAD     search ✅    ✅   stock_availables ✅ ✅   ✅   stock_movements ✅    ✅   stocks ✅    ✅   supply_order_details ✅    ✅   supply_order_histories ✅    ✅   supply_order_receipt_histories ✅    ✅   supply_order_states ✅    ✅   supply_orders ✅    ✅   warehouse_product_locations ✅    ✅   warehouses ✅ ✅ ✅  ✅    All resources have two schemas that are accessible via a parameter:</description>
+    </item>
+    
+    <item>
+      <title>Release publicly</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/release-publicly/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/release-publicly/</guid>
+      <description>Release the version publicly Once the QA team has greenlighted your build, you can move forward with the public release.
+Make certain you have go for publish! Also, avoid starting this process after 4 PM or on a Friday. 1. Merge security PRs on GitHub If there are unmerged security PRs:
+ Merge them on GitHub and publishing their security advisories. Rebase the local build branch that you created on the previous step to remove the merge commits from the security PRs you merged manually before.</description>
+    </item>
+    
+    <item>
+      <title>Reviewing Pull Requests</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/reviewing-pull-requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/reviewing-pull-requests/</guid>
+      <description>Reviewing Pull Requests The code review process is generally regarded as a good practice and is adopted by hundreds of software projects around the world.
+It provides lot of benefits:
+ it helps spotting errors in the code, because we all make mistakes and it can be hard to find one&amp;rsquo;s own mistakes. it helps improving code quality not only by ensuring it&amp;rsquo;s readable and understandable, but also by pinpointing design, performance or security issues that may have been unintentionally introduced by the author.</description>
     </item>
     
     <item>
@@ -1481,6 +1560,20 @@ How to contribute Contributors wishing to edit a module&amp;rsquo;s files should
       <guid>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/controller-routing/</guid>
       <description>Controller and Routing Modern/Symfony Controllers Read the Symfony documentation on Controllers and Routing. Every migrated page needs one or more Controllers: if you consider that a legacy Controller needs to be split into multiple controllers (for example: different URLs), it&amp;rsquo;s the right time to do it.
 New controllers should be placed in the src/PrestaShopBundle/Controller/Admin folder. Starting on 1.7.3, controllers are being progressively organized in sub-folders following the Back Office menu. For instance, if you are migrating a page located into &amp;ldquo;Advanced Parameters&amp;rdquo; section, put it into src/PrestaShop/Controller/Admin/Configure/AdvancedParameters.</description>
+    </item>
+    
+    <item>
+      <title>Final steps</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/final-steps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/releasing-prestashop/final-steps/</guid>
+      <description>Final steps 1. Update API stream for 1-click upgrade This should only be done for stable releases.
+(i.e. if not for betas and RCs).
+ This step requires special rights.
+Ask a maintainer from the PrestaShop Company with administrative rights on the PrestaShop API repository to perform this step.
+ Once this step is done, update the Release Tracker GitHub issue by ticking the &amp;ldquo;Available for upgrade&amp;rdquo; box.
+2. Create Docker images for the new version  Checkout the project and create a new branch Modify the file versions.</description>
     </item>
     
     <item>
@@ -1644,7 +1737,7 @@ The employee&amp;rsquo;s name field.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/development/components/global-components/</guid>
-      <description>Global JavaScript components? It&amp;rsquo;s a new system available since the 1.7.8 version mainly created for module developers, which allow you to use components we already use in the core without importing it. Here is the ADR where we decided what we should do to avoid this problem.
+      <description>Global JavaScript components?  It&amp;rsquo;s a new system available since the 1.7.8 version mainly created for module developers, which allow you to use components we already use in the core without importing it. Here is the ADR where we decided what we should do to avoid this problem.
 You are now able to use components we expose to the window.prestashop.component object without importing anything.
 This object contains two attributes:
  component which contain some components you can instantiate; instance which contains every instances of initiated components.</description>
@@ -1698,7 +1791,7 @@ Smoke testing A smoke test is a really simple and basic test that ensure the pag
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/development/uikit/</guid>
-      <description>What&amp;rsquo;s the PrestaShop UIKit? The UIKit is a project extending Bootstrap 4 in order to provide some components with PrestaShop&amp;rsquo;s colors. You can see every components on this page.
+      <description>What&amp;rsquo;s the PrestaShop UIKit? The UIKit is a project extending Bootstrap 4 in order to provide some components with PrestaShop&amp;rsquo;s colors. You can see every component on this page.
 How do we use the UIKit? We use it by adding it into our npm dependency, and then you&amp;rsquo;ve multiple possibilities to use it.
  You can import dist files, it means that you won&amp;rsquo;t be able to use our variables outside of the UIKit.</description>
     </item>
@@ -2049,14 +2142,13 @@ Type options    Option Type Default value Description     generated_value_length
     </item>
     
     <item>
-      <title>How to become a maintainer</title>
-      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/how-to-become-a-maintainer/</link>
+      <title>Hook tips</title>
+      <link>https://devdocs.prestashop.com/1.7/faq/tips-and-tricks/hook-tips/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/how-to-become-a-maintainer/</guid>
-      <description>How to become a maintainer In the PrestaShop project, maintainers are contributors with merge rights.
-The maintainer status is a position of great power, but it also carries great responsibility. As gatekeepers to the project&amp;rsquo;s code, maintainers are ultimately responsible for every contribution that is included in the project.
-Requirements to become a maintainer  Active participation in the project  Display a record of several accepted, quality Pull Requests having received little or no objections from maintainers.</description>
+      <guid>https://devdocs.prestashop.com/1.7/faq/tips-and-tricks/hook-tips/</guid>
+      <description>Hook tips Let&amp;rsquo;s say we need to add some javascript to the &amp;lsquo;Order create&amp;rsquo; BO page. So we use hookActionAdminControllerSetMedia. This hook is called on every BO page, so we need to filter the executions.
+if (&amp;#39;AdminOrders&amp;#39; === Tools::getValue(&amp;#39;controller&amp;#39;)) { // now we know we are only applying changes to admin order pages,  // but we aren&amp;#39;t yet sure if it&amp;#39;s a order create or order view page } In case we are using Prestashop version lower than 1.</description>
     </item>
     
     <item>
@@ -2241,6 +2333,16 @@ Everything will be fine, trust me. Info {{% notice info %}} This is pretty impor
       <guid>https://devdocs.prestashop.com/1.7/development/components/form/types-reference/number-min-max-filter/</guid>
       <description>NumberMinMaxFilterType The NumberMinMaxFilterType represents two NumberType fields - one holds minimum value of float number type and other holds maximum value. NumberType is one of the native symfony types.
 Type options    Option Type Default Description     min_field_options array array ( &amp;lsquo;attr&amp;rsquo; =&amp;gt; array ( &amp;lsquo;placeholder&amp;rsquo; =&amp;gt; $this-&amp;gt;trans(&amp;lsquo;Min&amp;rsquo;, [], &amp;lsquo;Admin.Global&amp;rsquo;)), ) Accepts all possible values that NumberType has   max_field_options array array ( &amp;lsquo;attr&amp;rsquo; =&amp;gt; array ( &amp;lsquo;placeholder&amp;rsquo; =&amp;gt; $this-&amp;gt;trans(&amp;lsquo;Max&amp;rsquo;, [], &amp;lsquo;Admin.</description>
+    </item>
+    
+    <item>
+      <title>Open Source Project FAQ</title>
+      <link>https://devdocs.prestashop.com/1.7/faq/open-source-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/faq/open-source-project/</guid>
+      <description>Open Source Project FAQ This section covers frequently asked questions about the Open Source Project.
+Why is issue X still not fixed after so long? Not having an issue fixed immediately (or in a fixed timeframe) does not mean that it won&amp;rsquo;t be fixed, or that maintainers don&amp;rsquo;t care. It doesn&amp;rsquo;t mean that the issue is NOT important either. It just means that other issues have been considered, for whatever reason, more important, so they were (or are being) tackled first.</description>
     </item>
     
     <item>
@@ -2628,17 +2730,6 @@ A: By default, when a product is displayed in a list its cover image is used, it
     </item>
     
     <item>
-      <title>Reviewing Pull Requests</title>
-      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/reviewing-pull-requests/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/reviewing-pull-requests/</guid>
-      <description>Reviewing Pull Requests The code review process is generally regarded as a good practice and is adopted by hundreds of software projects around the world.
-It provides lot of benefits:
- it helps spotting errors in the code, because we all make mistakes and it can be hard to find one&amp;rsquo;s own mistakes. it helps improving code quality not only by ensuring it&amp;rsquo;s readable and understandable, but also by pinpointing design, performance or security issues that may have been unintentionally introduced by the author.</description>
-    </item>
-    
-    <item>
       <title>Right-To-Left languages</title>
       <link>https://devdocs.prestashop.com/1.7/development/internationalization/rtl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2801,18 +2892,6 @@ Type options    Option Type Default Description     multiple bool true Whether m
     </item>
     
     <item>
-      <title>Summary of how GitHub Issues and Pull Requests are processed</title>
-      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/summary-github-lifecycle/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/summary-github-lifecycle/</guid>
-      <description>Summary of how GitHub Issues and Pull Requests are processed GitHub is the main tool used by maintainers to manage the PrestaShop project.
-This page quickly describes how Issues and Pull Requests are processed on GitHub.
-The teams On GitHub, there are mainly three teams working together on the project.
- Product Team: this team takes care of the product vision of the software. It has Product Managers, UX Designers and Wording Managers.</description>
-    </item>
-    
-    <item>
       <title>Suppliers</title>
       <link>https://devdocs.prestashop.com/1.7/webservice/resources/suppliers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2964,7 +3043,7 @@ The following instructions only apply to PrestaShop 1.7.2 and later. In previous
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/development/components/tinymce/</guid>
-      <description>Modify the TinyMCE configuration You are able to modify the configuration by using the actionAdminControllerSetMedia hook.
+      <description>Modify the TinyMCE configuration  You are able to modify the configuration by using the actionAdminControllerSetMedia hook.
 Inside the JS file you added with this hook, you need to create a global object containing your custom configuration:
 window.defaultTinyMceConfig = { [...] } and as you can see in the tinymce core file it will load it instead of the default core configuration.
 Keep in mind that the config is not completely replaced, it&amp;rsquo;s an Object.</description>
@@ -3008,6 +3087,19 @@ Type options    Option Type Default Description     type string Symfony\Componen
       <description>Upgrade FAQ  After upgrading, I lost access to some Back-Office pages Upgrade fails with Error message JqXHR  Restore access to Back Office Page Q: After upgrading my PrestaShop to a new version, I lost access to some Back-Office pages. How can I fix it?
 A: It is likely that some SQL configuration is not correct.
 First, identify what is the slug of the Back Office pages. You can find them into the SQL table ps_authorization_role.</description>
+    </item>
+    
+    <item>
+      <title>Users</title>
+      <link>https://devdocs.prestashop.com/1.7/development/components/users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/components/users/</guid>
+      <description>Users Authentication Three types of users can be authenticated on PrestaShop:
+ Front-Office browser users Back-Office browser users API consumers  Front-Office users and Back office users have access to a login form, where they must input email and password.
+API consumers are authenticated using an API key.
+Login Upon successfull verification of email and password, browser users are logged in through the creation of a Cookie in Context::updateCustomer().
+Multiple hooks allow modules to interact with the authentication process, at different steps.</description>
     </item>
     
     <item>
