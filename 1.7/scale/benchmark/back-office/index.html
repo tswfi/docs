@@ -21,15 +21,15 @@
     <title>Back-Office Benchmark :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1615444466" rel="stylesheet">
-    <link href="/css/syntax-github.css?1615444466" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1615444466" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1615444466" rel="stylesheet">
-    <link href="/css/auto-complete.css?1615444466" rel="stylesheet">
-    <link href="/css/style.css?1615444466" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1615563983" rel="stylesheet">
+    <link href="/css/syntax-github.css?1615563983" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1615563983" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1615563983" rel="stylesheet">
+    <link href="/css/auto-complete.css?1615563983" rel="stylesheet">
+    <link href="/css/style.css?1615563983" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1615444466"></script>
+    <script src="/js/jquery-3.3.1.min.js?1615563983"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1615444466"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1615444466"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1615563983"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1615563983"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1615444466"></script>
+<script type="text/javascript" src="/js/search.js?1615563983"></script>
 
     
   </div>
@@ -16564,7 +16564,7 @@
 <p>In order to benchmark the performances of the backoffice of your shop, you will use the <strong><a href="https://gatling.io/">Gatling</a></strong> testing tool.</p>
 <blockquote>
 <p><b>Note:
-Backoffice benchmark is only possible starting with prestashop 1.7.4.0!</b></p>
+Backoffice benchmark is only possible starting with PrestaShop 1.7.4.0!</b></p>
 </blockquote>
 <blockquote>
 <p>If you want still want to run the test for version &lt; 1.7.4.0, take a look at this PR: <a href="https://github.com/PrestaShop/PrestaShop/pull/8876">https://github.com/PrestaShop/PrestaShop/pull/8876</a></p>
@@ -16579,15 +16579,15 @@ Backoffice benchmark is only possible starting with prestashop 1.7.4.0!</b></p>
 </ul>
 <h3 id="clone-the-repository">Clone the repository</h3>
 <p>To follow these instructions, you will use the following github repository:
-<strong><a href="https://github.com/PrestaShop/performance-project">Prestashop performance project</a></strong></p>
+<strong><a href="https://github.com/PrestaShop/performance-project">PrestaShop performance project</a></strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone git@github.com:PrestaShop/performance-project.git
 </code></pre></div><h3 id="shop-filled-with-fixtures">Shop filled with fixtures</h3>
-<p>Benchmarks require a pre-populated shop. But this shop content has to be the same at each new bench in order to get reproducible results. Prestashop ShopCreator project will help to generate fixtures, used during shop installation to populate the benched shop.</p>
+<p>Benchmarks require a pre-populated shop. But this shop content has to be the same at each new bench in order to get reproducible results. PrestaShop ShopCreator project will help to generate fixtures, used during shop installation to populate the benched shop.</p>
 <h4 id="generate-fixtures">Generate fixtures</h4>
 <pre><code>cd performance-project
 cd shop
 </code></pre>
-<p><code>README.md</code> contains instructions to get a working shop filled with fixtures, using “Prestashop ShopCreator” project</p>
+<p><code>README.md</code> contains instructions to get a working shop filled with fixtures, using “PrestaShop ShopCreator” project</p>
 <pre><code>git clone git@github.com:PrestaShop/prestashop-shop-creator.git
 </code></pre>
 <p>ShopCreator requires a config file to know which fixtures it has to generate. shop-creator-config.yml is the one used in this study. You can customize it to fit your own needs. Copy it in the ShopCreator /config/ directory.</p>
@@ -16599,9 +16599,9 @@ cd shop
 <p>Once your config is ready, run fixture generation in ShopCreator directory</p>
 <pre><code>php app/console.php
 </code></pre>
-<p>Fixtures are created in /generated_data/ directory. It contains xml files with data for each Prestashop entity, and images for products, categories…</p>
+<p>Fixtures are created in /generated_data/ directory. It contains xml files with data for each PrestaShop entity, and images for products, categories…</p>
 <h4 id="install-a-shop-with-generated-fixtures">Install a shop with generated fixtures</h4>
-<p>To use these generated fixtures, you need to copy the directory content into the installation directory of Prestashop before installing the shop</p>
+<p>To use these generated fixtures, you need to copy the directory content into the installation directory of PrestaShop before installing the shop</p>
 <pre><code>cp -R generated_data/* [prestashop]/install/fixtures/fashion/
 </code></pre>
 <p>Make sure you’re not in debug mode! In config/defines.inc.php you should have:</p>
@@ -16734,9 +16734,9 @@ If this is not the case, don&rsquo;t forget to restore it when you finish your p
 <footer class="article-footer">
 	
 <div>
-  Last updated on August 13, 2020
+  Last updated on March 12, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/4da3f336e5f5dd08695fa33a338ffeb54a86612f">"Add nginx and apache configuration" (4da3f336)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/edfc80d58eb89d15fe73118427478abcaa9a8d1b">"Update back-office.md" (edfc80d5)</a>
   
 </div>
 
@@ -16757,19 +16757,19 @@ If this is not the case, don&rsquo;t forget to restore it when you finish your p
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1615444466"></script>
-    <script src="/js/perfect-scrollbar.min.js?1615444466"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1615444466"></script>
-    <script src="/js/jquery.sticky.js?1615444466"></script>
-    <script src="/js/featherlight.min.js?1615444466"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1615444466"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1615444466"></script>
-    <script src="/js/learn.js?1615444466"></script>
-    <script src="/js/hugo-learn.js?1615444466"></script>
-    <script src="/js/main.js?1615444466"></script>
+    <script src="/js/clipboard.min.js?1615563983"></script>
+    <script src="/js/perfect-scrollbar.min.js?1615563983"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1615563983"></script>
+    <script src="/js/jquery.sticky.js?1615563983"></script>
+    <script src="/js/featherlight.min.js?1615563983"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1615563983"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1615563983"></script>
+    <script src="/js/learn.js?1615563983"></script>
+    <script src="/js/hugo-learn.js?1615563983"></script>
+    <script src="/js/main.js?1615563983"></script>
 
-    <link href="/mermaid/mermaid.css?1615444466" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1615444466"></script>
+    <link href="/mermaid/mermaid.css?1615563983" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1615563983"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
