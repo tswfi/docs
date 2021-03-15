@@ -21,15 +21,15 @@
     <title>How to migrate to PrestaShop 1.7 :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1615806439" rel="stylesheet">
-    <link href="/css/syntax-github.css?1615806439" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1615806439" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1615806439" rel="stylesheet">
-    <link href="/css/auto-complete.css?1615806439" rel="stylesheet">
-    <link href="/css/style.css?1615806439" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1615837192" rel="stylesheet">
+    <link href="/css/syntax-github.css?1615837192" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1615837192" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1615837192" rel="stylesheet">
+    <link href="/css/auto-complete.css?1615837192" rel="stylesheet">
+    <link href="/css/style.css?1615837192" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1615806439"></script>
+    <script src="/js/jquery-3.3.1.min.js?1615837192"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1615806439"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1615806439"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1615837192"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1615837192"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1615806439"></script>
+<script type="text/javascript" src="/js/search.js?1615837192"></script>
 
     
   </div>
@@ -10445,7 +10445,6 @@
             </li>
             <li><a href="#preparing-the-destination-shop">Preparing the destination shop</a>
               <ul>
-                <li><a href="#clean-demo-data">Clean demo data</a></li>
                 <li><a href="#install-languages">Install languages</a></li>
               </ul>
             </li>
@@ -16843,21 +16842,10 @@ On PrestaShop 1.7 the number of options has increased, and a redirection to a ca
 <p>We assume that you will want to overwrite the demonstration data with the data you exported from the old shop. Leaving your IDs intact will replace any existing data with the same ID.</p>
 <p>If you want to add the extracted data without overriding the existing records on the new shop, you should take care of removing the IDs from your CSV files, or ignore them during the import.</p>
 <h3 id="preparing-the-destination-shop">Preparing the destination shop</h3>
-<h4 id="clean-demo-data">Clean demo data</h4>
-<p>PrestaShop is installed with demonstration data including products, customers, orders etc. They can be removed to make room for your own data.</p>
-<p>Cleaning your shop from this demonstration data should be done before starting the import of your data. The free module “PrestaShop cleaner” can handle that in a few clicks.</p>
-<p>On your destination shop, search for the module &ldquo;PrestaShop cleaner&rdquo; or &ldquo;pscleaner&rdquo;, or download and install the <a href="https://github.com/PrestaShop/pscleaner/releases/">latest version from GitHub</a>.</p>
-<p>Important: Make sure to run this tool <strong>on the new shop</strong>, not the one in production.</p>
+<p>Make sure to select <code>dont install demo data</code> when installing the shop</p>
 <figure>
-    <img src="/images/1.7/upgrade-migration/ps-cleaner-card.png"/> <figcaption>
-            <h4>PrestaShop cleaner card on the module catalog</h4>
-        </figcaption>
-</figure>
-
-<p>Once installed, go on the module configuration page by clicking on the configure button. You will find different available actions. The first half is responsible of erasing some content of your shop (product catalog, orders, customers etc.), while the other one checks, removes and optimizes your database content.</p>
-<figure>
-    <img src="/images/1.7/upgrade-migration/ps-cleaner-configuration-page.png"/> <figcaption>
-            <h4>PrestaShop cleaner configuration page</h4>
+    <img src="/images/1.7/upgrade-migration/install-without-data-min.png"/> <figcaption>
+            <h4>&#39;Dont install demo data</h4>
         </figcaption>
 </figure>
 
@@ -17148,9 +17136,9 @@ them are certainly in your area.</p>
 <footer class="article-footer">
 	
 <div>
-  Last updated on November 2, 2020
+  Last updated on March 15, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/70a0e4946fff32f37536a477de4b80e4eb03d86c">"Grammatical error" (70a0e494)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/b8b043c17cf806b988b8b5209efd457b77b71ee0">"Update migration.md" (b8b043c1)</a>
   
 </div>
 
@@ -17171,19 +17159,19 @@ them are certainly in your area.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1615806439"></script>
-    <script src="/js/perfect-scrollbar.min.js?1615806439"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1615806439"></script>
-    <script src="/js/jquery.sticky.js?1615806439"></script>
-    <script src="/js/featherlight.min.js?1615806439"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1615806439"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1615806439"></script>
-    <script src="/js/learn.js?1615806439"></script>
-    <script src="/js/hugo-learn.js?1615806439"></script>
-    <script src="/js/main.js?1615806439"></script>
+    <script src="/js/clipboard.min.js?1615837192"></script>
+    <script src="/js/perfect-scrollbar.min.js?1615837192"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1615837192"></script>
+    <script src="/js/jquery.sticky.js?1615837192"></script>
+    <script src="/js/featherlight.min.js?1615837192"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1615837192"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1615837192"></script>
+    <script src="/js/learn.js?1615837192"></script>
+    <script src="/js/hugo-learn.js?1615837192"></script>
+    <script src="/js/main.js?1615837192"></script>
 
-    <link href="/mermaid/mermaid.css?1615806439" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1615806439"></script>
+    <link href="/mermaid/mermaid.css?1615837192" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1615837192"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
