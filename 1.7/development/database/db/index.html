@@ -21,15 +21,15 @@
     <title>Db class :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1615837195" rel="stylesheet">
-    <link href="/css/syntax-github.css?1615837195" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1615837195" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1615837195" rel="stylesheet">
-    <link href="/css/auto-complete.css?1615837195" rel="stylesheet">
-    <link href="/css/style.css?1615837195" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1615987701" rel="stylesheet">
+    <link href="/css/syntax-github.css?1615987701" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1615987701" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1615987701" rel="stylesheet">
+    <link href="/css/auto-complete.css?1615987701" rel="stylesheet">
+    <link href="/css/style.css?1615987701" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1615837195"></script>
+    <script src="/js/jquery-3.3.1.min.js?1615987701"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1615837195"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1615837195"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1615987701"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1615987701"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1615837195"></script>
+<script type="text/javascript" src="/js/search.js?1615987701"></script>
 
     
   </div>
@@ -10424,7 +10424,7 @@
   <ul>
     <li><a href="#using-the-database-with-the-db-class">Using the database with the Db class</a>
       <ul>
-        <li><a href="#get-link-to-the-database">Get link to the database</a></li>
+        <li><a href="#initialize-connection-to-database">Initialize connection to database</a></li>
         <li><a href="#db-class-methods">Db class methods</a>
           <ul>
             <li><a href="#execute-a-raw-sql-request-select-only">Execute a raw SQL request (SELECT only)</a></li>
@@ -16535,13 +16535,13 @@
 
 
 <h1 id="using-the-database-with-the-db-class">Using the database with the Db class</h1>
-<h2 id="get-link-to-the-database">Get link to the database</h2>
+<h2 id="initialize-connection-to-database">Initialize connection to database</h2>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="sd">/**
 </span><span class="sd"> * @var \Db $db
 </span><span class="sd"> */</span>
 <span class="nv">$db</span> <span class="o">=</span> <span class="nx">\Db</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
-</code></pre></div><p>The first call to this method initialize the link to the database, and return the same link to all the next calls.
+</code></pre></div><p>The first call to this method initializes the link to the database, and return the same link to all the next calls.
 <code>$db</code> in this example will be reused in all the next examples.</p>
 <h2 id="db-class-methods">Db class methods</h2>
 <h3 id="execute-a-raw-sql-request-select-only">Execute a raw SQL request (SELECT only)</h3>
@@ -16569,8 +16569,8 @@ This function automatically adds &ldquo;LIMIT 1&rdquo; to the query.</p>
 <span class="sd">/** @var string|false $salesCount */</span>
 <span class="nv">$salesCount</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">getValue</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
 </code></pre></div><p>As the method deals with raw SQL requests, the <code>_DB_PREFIX_</code> must be used.</p>
-<p>This method is convenient when you need only one value to retrieve from the database.
-It prevent to loop in several arrays in order to get the first value of the first row.</p>
+<p>This method is convenient if you want to retrieve only one value from the database.</p>
+<p>It avoids to loop in several arrays in order to get the first value of the first row.</p>
 <h3 id="execute-a-raw-sql-request-update-insert">Execute a raw SQL request (UPDATE, INSERT&hellip;)</h3>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&#34;INSERT INTO `&#39; . _DB_PREFIX_ . &#39;some_table` (`id_table`) VALUES (10)&#34;</span><span class="p">;</span>
@@ -16587,7 +16587,7 @@ It prevent to loop in several arrays in order to get the first value of the firs
     <span class="s1">&#39;date_upd&#39;</span> <span class="o">=&gt;</span> <span class="nx">date</span><span class="p">(</span><span class="s1">&#39;Y-m-d H:i:s&#39;</span><span class="p">),</span>
 <span class="p">));</span>
 </code></pre></div><p><code>_DB_PREFIX_</code> will be automatically prefixed to the table name.</p>
-<p>The result is boolean saying if the request was properly executed or not.</p>
+<p>The result is a boolean whose state indicates if the request was properly executed or not.</p>
 <h3 id="insert-multiple-rows-in-the-database-batch-insert">Insert multiple rows in the database (batch insert)</h3>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$now</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s1">&#39;Y-m-d H:i:s&#39;</span><span class="p">);</span>
@@ -16609,7 +16609,7 @@ It prevent to loop in several arrays in order to get the first value of the firs
 <span class="p">);</span>
 </code></pre></div><p>This will execute the <code>INSERT</code> SQL command only once.</p>
 <p><code>_DB_PREFIX_</code> will be automatically prefixed to the table name.</p>
-<p>The result is boolean saying if the request was properly executed or not.</p>
+<p>The result is a boolean whose state indicates if the request was properly executed or not.</p>
 <h3 id="update-rows-in-the-database">Update row(s) in the database</h3>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="sd">/** @var bool $result */</span>
@@ -16639,9 +16639,9 @@ The <code>bqSQL()</code> function can also be used. Note that it escapes the <co
 <footer class="article-footer">
 	
 <div>
-  Last updated on February 12, 2021
+  Last updated on March 13, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/8787d721d372ba95861f04070fd06fc4a37d4161">"presentation" (8787d721)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/af1219697f376c690447fdbfd0bfc6301062bf2e">"Improve a few sentences in Database page" (af121969)</a>
   
 </div>
 
@@ -16662,19 +16662,19 @@ The <code>bqSQL()</code> function can also be used. Note that it escapes the <co
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1615837195"></script>
-    <script src="/js/perfect-scrollbar.min.js?1615837195"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1615837195"></script>
-    <script src="/js/jquery.sticky.js?1615837195"></script>
-    <script src="/js/featherlight.min.js?1615837195"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1615837195"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1615837195"></script>
-    <script src="/js/learn.js?1615837195"></script>
-    <script src="/js/hugo-learn.js?1615837195"></script>
-    <script src="/js/main.js?1615837195"></script>
+    <script src="/js/clipboard.min.js?1615987701"></script>
+    <script src="/js/perfect-scrollbar.min.js?1615987701"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1615987701"></script>
+    <script src="/js/jquery.sticky.js?1615987701"></script>
+    <script src="/js/featherlight.min.js?1615987701"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1615987701"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1615987701"></script>
+    <script src="/js/learn.js?1615987701"></script>
+    <script src="/js/hugo-learn.js?1615987701"></script>
+    <script src="/js/main.js?1615987701"></script>
 
-    <link href="/mermaid/mermaid.css?1615837195" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1615837195"></script>
+    <link href="/mermaid/mermaid.css?1615987701" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1615987701"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
