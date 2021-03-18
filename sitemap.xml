@@ -124,7 +124,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/tutorials/prestashop-webservice-lib/setup-library/</loc>
-    <lastmod>2020-09-19T15:39:12+01:00</lastmod>
+    <lastmod>2021-03-18T12:15:05+01:00</lastmod>
   </url>
   
   <url>
@@ -1654,6 +1654,11 @@
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/price_ranges/</loc>
     <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/faq/pricing/</loc>
+    <lastmod>2021-03-18T14:10:23+01:00</lastmod>
   </url>
   
   <url>

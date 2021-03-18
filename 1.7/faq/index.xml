@@ -28,6 +28,18 @@ Why is issue X still not fixed after so long? Not having an issue fixed immediat
     </item>
     
     <item>
+      <title>Pricing FAQ</title>
+      <link>https://devdocs.prestashop.com/1.7/faq/pricing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/faq/pricing/</guid>
+      <description>Pricing FAQ  Refresh exchange rates  Refresh exchange rates Q: How can I make sure my currency exchange rates are regularly updated?
+A: In PrestaShop, all currencies is associated with the exchange rate for Euro.
+These exchange rates are updated every day by authorities in charge of these currencies.
+The PrestaShop company gathers these rates and expose them through API endpoint https://api.prestashop.com/xml/currencies.xml (URL available in the code through constant _PS_CURRENCY_FEED_URL_).</description>
+    </item>
+    
+    <item>
       <title>Product FAQ</title>
       <link>https://devdocs.prestashop.com/1.7/faq/product/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
