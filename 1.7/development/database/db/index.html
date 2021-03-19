@@ -21,15 +21,15 @@
     <title>Db class :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1616102800" rel="stylesheet">
-    <link href="/css/syntax-github.css?1616102800" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1616102800" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1616102800" rel="stylesheet">
-    <link href="/css/auto-complete.css?1616102800" rel="stylesheet">
-    <link href="/css/style.css?1616102800" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1616158124" rel="stylesheet">
+    <link href="/css/syntax-github.css?1616158124" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1616158124" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1616158124" rel="stylesheet">
+    <link href="/css/auto-complete.css?1616158124" rel="stylesheet">
+    <link href="/css/style.css?1616158124" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1616102800"></script>
+    <script src="/js/jquery-3.3.1.min.js?1616158124"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1616102800"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1616102800"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1616158124"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1616158124"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1616102800"></script>
+<script type="text/javascript" src="/js/search.js?1616158124"></script>
 
     
   </div>
@@ -10451,6 +10451,8 @@
             <li><a href="#execute-a-raw-sql-request-select-only">Execute a raw SQL request (SELECT only)</a></li>
             <li><a href="#execute-a-raw-sql-request-select-only-and-get-the-first-row">Execute a raw SQL request (SELECT only) and get the first row</a></li>
             <li><a href="#execute-a-select-request-with-only-one-column-and-one-row">Execute a SELECT request with only one column and one row</a></li>
+            <li><a href="#gets-the-number-of-rows-in-a-result">Gets the number of rows in a result</a></li>
+            <li><a href="#gets-the-number-of-affected-rows">Gets the number of affected rows</a></li>
             <li><a href="#execute-a-raw-sql-request-update-insert">Execute a raw SQL request (UPDATE, INSERT&hellip;)</a></li>
             <li><a href="#insert-a-row-in-the-database">Insert a row in the database</a></li>
             <li><a href="#insert-multiple-rows-in-the-database-batch-insert">Insert multiple rows in the database (batch insert)</a></li>
@@ -16607,6 +16609,13 @@ This function automatically adds &ldquo;LIMIT 1&rdquo; to the query.</p>
 </code></pre></div><p>As the method deals with raw SQL requests, the <code>_DB_PREFIX_</code> must be used.</p>
 <p>This method is convenient if you want to retrieve only one value from the database.</p>
 <p>It avoids to loop in several arrays in order to get the first value of the first row.</p>
+<h3 id="gets-the-number-of-rows-in-a-result">Gets the number of rows in a result</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nv">$db</span><span class="o">-&gt;</span><span class="na">numRows</span><span class="p">();</span>
+</code></pre></div><p>This method caches and returns the number of rows from the last result set.</p>
+<p>Be careful, if your request has a limit, the method <code>numRows()</code> is limited too. If you need to retrieve the number of rows without limits, you need to use <code>SELECT COUNT(*)</code>.</p>
+<h3 id="gets-the-number-of-affected-rows">Gets the number of affected rows</h3>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nv">$db</span><span class="o">-&gt;</span><span class="na">Affected_Rows</span><span class="p">();</span>
+</code></pre></div><p>Returns the number of rows impacted by the latest <code>INSERT</code>, <code>UPDATE</code>, <code>REPLACE</code> or <code>DELETE</code> query.</p>
 <h3 id="execute-a-raw-sql-request-update-insert">Execute a raw SQL request (UPDATE, INSERT&hellip;)</h3>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nv">$request</span> <span class="o">=</span> <span class="s2">&#34;INSERT INTO `&#39; . _DB_PREFIX_ . &#39;some_table` (`id_table`) VALUES (10)&#34;</span><span class="p">;</span>
@@ -16675,9 +16684,9 @@ The <code>bqSQL()</code> function can also be used. Note that it escapes the <co
 <footer class="article-footer">
 	
 <div>
-  Last updated on March 13, 2021
+  Last updated on March 18, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/af1219697f376c690447fdbfd0bfc6301062bf2e">"Improve a few sentences in Database page" (af121969)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/f81e2772b3cd276a5d1225582478bed1e7e7d878">"suggestion ok" (f81e2772)</a>
   
 </div>
 
@@ -16698,19 +16707,19 @@ The <code>bqSQL()</code> function can also be used. Note that it escapes the <co
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1616102800"></script>
-    <script src="/js/perfect-scrollbar.min.js?1616102800"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1616102800"></script>
-    <script src="/js/jquery.sticky.js?1616102800"></script>
-    <script src="/js/featherlight.min.js?1616102800"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1616102800"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1616102800"></script>
-    <script src="/js/learn.js?1616102800"></script>
-    <script src="/js/hugo-learn.js?1616102800"></script>
-    <script src="/js/main.js?1616102800"></script>
+    <script src="/js/clipboard.min.js?1616158124"></script>
+    <script src="/js/perfect-scrollbar.min.js?1616158124"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1616158124"></script>
+    <script src="/js/jquery.sticky.js?1616158124"></script>
+    <script src="/js/featherlight.min.js?1616158124"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1616158124"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1616158124"></script>
+    <script src="/js/learn.js?1616158124"></script>
+    <script src="/js/hugo-learn.js?1616158124"></script>
+    <script src="/js/main.js?1616158124"></script>
 
-    <link href="/mermaid/mermaid.css?1616102800" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1616102800"></script>
+    <link href="/mermaid/mermaid.css?1616158124" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1616158124"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
