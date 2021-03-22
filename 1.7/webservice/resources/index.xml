@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title>Attachments</title>
+      <link>https://devdocs.prestashop.com/1.7/webservice/resources/attachments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/webservice/resources/attachments/</guid>
+      <description>Resources for Attachments Attachment    Name Format Required Max size Description     file isGenericName ✔️ 40    file_name isGenericName ❌ 128    file_size isUnsignedId ❌     mime isCleanHtml ✔️ 128    name isGenericName ✔️ 32    description isCleanHtml ❌     associations  ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+    </item>
+    
+    <item>
       <title>Carriers</title>
       <link>https://devdocs.prestashop.com/1.7/webservice/resources/carriers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -57,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/combinations/</guid>
-      <description>Resources for Combinations Combination    Name Format Required Max size Description     id_product isUnsignedId ✔️  Product ID   location isGenericName ❌ 64    ean13 isEan13 ❌ 13    isbn isIsbn ❌ 32    upc isUpc ❌ 12    mpn isMpn ❌ 40    quantity isInt ❌ 10    reference  ❌ 64    supplier_reference  ❌ 64    wholesale_price isPrice ❌ 27    price isNegativePrice ❌ 20    ecotax isPrice ❌ 20    weight isFloat ❌     unit_price_impact isNegativePrice ❌ 20    minimal_quantity isUnsignedId ✔️     low_stock_threshold isInt ❌     low_stock_alert isBool ❌     default_on isBool ❌     available_date isDateFormat ❌     associations  ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+      <description>Resources for Combinations Combination    Name Format Required Max size Description     id_product isUnsignedId ✔️  Product ID   location isString ❌ 255    ean13 isEan13 ❌ 13    isbn isIsbn ❌ 32    upc isUpc ❌ 12    mpn isMpn ❌ 40    quantity isInt ❌ 10    reference  ❌ 64    supplier_reference  ❌ 64    wholesale_price isNegativePrice ❌ 27    price isNegativePrice ❌ 20    ecotax isPrice ❌ 20    weight isFloat ❌     unit_price_impact isNegativePrice ❌ 20    minimal_quantity isUnsignedId ✔️     low_stock_threshold isInt ❌     low_stock_alert isBool ❌     default_on isBool ❌     available_date isDateFormat ❌     associations  ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
     </item>
     
     <item>
@@ -111,7 +120,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/customer_messages/</guid>
-      <description>Resources for Customer messages Customer_message    Name Format Required Max size Description     id_employee isUnsignedId ❌  Employee ID   id_customer_thread  ❌  Customer Thread ID   ip_address isIp2Long ❌ 15    message isCleanHtml ✔️ 16777216    file_name  ❌     user_agent  ❌     private  ❌     date_add isDate ❌     date_upd isDate ❌     read isBool ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+      <description>Resources for Customer messages Customer_message    Name Format Required Max size Description     id_employee isUnsignedId ❌  Employee ID   id_customer_thread  ❌  Customer Thread ID   ip_address isIp2Long ❌ 15    message isCleanHtml ✔️ 16777216    file_name  ❌     user_agent  ❌     private isBool ❌     date_add isDate ❌     date_upd isDate ❌     read isBool ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
     </item>
     
     <item>
@@ -129,7 +138,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/customers/</guid>
-      <description>Resources for Customers Customer    Name Format Required Writable Max size Description     id_default_group  ❌ ✔️  Default group ID   id_lang isUnsignedId ❌ ✔️  Lang ID   newsletter_date_add  ❌ ✔️     ip_registration_newsletter  ❌ ✔️     last_passwd_gen  ❌ ❌     secure_key isMd5 ❌ ❌     deleted isBool ❌ ✔️     passwd isPasswd ✔️ ✔️ 255    lastname isCustomerName ✔️ ✔️ 255    firstname isCustomerName ✔️ ✔️ 255    email isEmail ✔️ ✔️ 255    id_gender isUnsignedId ❌ ✔️  Gender ID   birthday isBirthDate ❌ ✔️     newsletter isBool ❌ ✔️     optin isBool ❌ ✔️     website isUrl ❌ ✔️     company isGenericName ❌ ✔️     siret isGenericName ❌ ✔️     ape isApe ❌ ✔️     outstanding_allow_amount isFloat ❌ ✔️     show_public_prices isBool ❌ ✔️     id_risk isUnsignedInt ❌ ✔️  Risk ID   max_payment_days isUnsignedInt ❌ ✔️     active isBool ❌ ✔️     note isCleanHtml ❌ ✔️ 65000    is_guest isBool ❌ ✔️     id_shop isUnsignedId ❌ ✔️  Shop ID   id_shop_group isUnsignedId ❌ ✔️  Shop group ID   date_add isDate ❌ ✔️     date_upd isDate ❌ ✔️     reset_password_token isSha1 ❌ ✔️ 40    reset_password_validity isDateOrNull ❌ ✔️     associations  ❌ ✔️      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+      <description>Resources for Customers Customer    Name Format Required Writable Max size Description     id_default_group  ❌ ✔️  Default group ID   id_lang isUnsignedId ❌ ✔️  Lang ID   newsletter_date_add  ❌ ✔️     ip_registration_newsletter  ❌ ✔️     last_passwd_gen  ❌ ❌     secure_key isMd5 ❌ ❌     deleted isBool ❌ ✔️     passwd isPasswd ✔️ ✔️ 255    lastname isCustomerName ✔️ ✔️ 255    firstname isCustomerName ✔️ ✔️ 255    email isEmail ✔️ ✔️ 255    id_gender isUnsignedId ❌ ✔️  Gender ID   birthday isBirthDate ❌ ✔️     newsletter isBool ❌ ✔️     optin isBool ❌ ✔️     website isUrl ❌ ✔️     company isGenericName ❌ ✔️     siret isGenericName ❌ ✔️     ape isApe ❌ ✔️     outstanding_allow_amount isFloat ❌ ✔️     show_public_prices isBool ❌ ✔️     id_risk isUnsignedInt ❌ ✔️  Risk ID   max_payment_days isUnsignedInt ❌ ✔️     active isBool ❌ ✔️     note  ❌ ✔️ 65000    is_guest isBool ❌ ✔️     id_shop isUnsignedId ❌ ✔️  Shop ID   id_shop_group isUnsignedId ❌ ✔️  Shop group ID   date_add isDate ❌ ✔️     date_upd isDate ❌ ✔️     reset_password_token isSha1 ❌ ✔️ 40    reset_password_validity isDateOrNull ❌ ✔️     associations  ❌ ✔️      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
     </item>
     
     <item>
@@ -184,6 +193,15 @@
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/image_types/</guid>
       <description>Resources for Image types Image_type    Name Format Required Max size Description     name isImageTypeName ✔️ 64    width isImageSize ✔️     height isImageSize ✔️     categories isBool ❌     products isBool ❌     manufacturers isBool ❌     suppliers isBool ❌     stores isBool ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+    </item>
+    
+    <item>
+      <title>Images</title>
+      <link>https://devdocs.prestashop.com/1.7/webservice/resources/images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/webservice/resources/images/</guid>
+      <description>Resources for Images Image_types    Name Format Required Description     general  ❌    products  ❌    categories  ❌    manufacturers  ❌    suppliers  ❌    stores  ❌    customizations  ❌     Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34;&amp;gt; &amp;lt;image_types&amp;gt; &amp;lt;general xlink:href=&amp;#34;http://ps-develop.localhost/api/images/general&amp;#34; get=&amp;#34;true&amp;#34; put=&amp;#34;false&amp;#34; post=&amp;#34;false&amp;#34; delete=&amp;#34;false&amp;#34; head=&amp;#34;true&amp;#34; upload_allowed_mimetypes=&amp;#34;image/gif, image/jpg, image/jpeg, image/pjpeg, image/png, image/x-png&amp;#34;/&amp;gt; &amp;lt;products xlink:href=&amp;#34;http://ps-develop.</description>
     </item>
     
     <item>
@@ -291,7 +309,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/orders/</guid>
-      <description>Resources for Orders Order    Name Format Required Not filterable Description     id_address_delivery isUnsignedId ✔️  Delivery address ID   id_address_invoice isUnsignedId ✔️  Invoice address ID   id_cart isUnsignedId ✔️  Cart ID   id_currency isUnsignedId ✔️  Currency ID   id_lang isUnsignedId ✔️  Lang ID   id_customer isUnsignedId ✔️  Customer ID   id_carrier isUnsignedId ✔️  Carrier ID   current_state isUnsignedId ❌     module isModuleName ✔️     invoice_number  ❌     invoice_date  ❌     delivery_number  ❌     delivery_date  ❌     valid  ❌     date_add isDate ❌     date_upd isDate ❌     shipping_number isTrackingNumber ❌ true    id_shop_group isUnsignedId ❌  Shop group ID   id_shop isUnsignedId ❌  Shop ID   secure_key isMd5 ❌     payment isGenericName ✔️     recyclable isBool ❌     gift isBool ❌     gift_message isMessage ❌     mobile_theme isBool ❌     total_discounts isPrice ❌     total_discounts_tax_incl isPrice ❌     total_discounts_tax_excl isPrice ❌     total_paid isPrice ✔️     total_paid_tax_incl isPrice ❌     total_paid_tax_excl isPrice ❌     total_paid_real isPrice ✔️     total_products isPrice ✔️     total_products_wt isPrice ✔️     total_shipping isPrice ❌     total_shipping_tax_incl isPrice ❌     total_shipping_tax_excl isPrice ❌     carrier_tax_rate isFloat ❌     total_wrapping isPrice ❌     total_wrapping_tax_incl isPrice ❌     total_wrapping_tax_excl isPrice ❌     round_mode isUnsignedId ❌     round_type isUnsignedId ❌     conversion_rate isFloat ✔️     reference  ❌     associations  ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+      <description>Resources for Orders Order    Name Format Required Not filterable Description     id_address_delivery isUnsignedId ✔️  Delivery address ID   id_address_invoice isUnsignedId ✔️  Invoice address ID   id_cart isUnsignedId ✔️  Cart ID   id_currency isUnsignedId ✔️  Currency ID   id_lang isUnsignedId ✔️  Lang ID   id_customer isUnsignedId ✔️  Customer ID   id_carrier isUnsignedId ✔️  Carrier ID   current_state isUnsignedId ❌     module isModuleName ✔️     invoice_number  ❌     invoice_date  ❌     delivery_number  ❌     delivery_date  ❌     valid  ❌     date_add isDate ❌     date_upd isDate ❌     shipping_number isTrackingNumber ❌ true    note isCleanHtml ❌     id_shop_group isUnsignedId ❌  Shop group ID   id_shop isUnsignedId ❌  Shop ID   secure_key isMd5 ❌     payment isGenericName ✔️     recyclable isBool ❌     gift isBool ❌     gift_message isMessage ❌     mobile_theme isBool ❌     total_discounts isPrice ❌     total_discounts_tax_incl isPrice ❌     total_discounts_tax_excl isPrice ❌     total_paid isPrice ✔️     total_paid_tax_incl isPrice ❌     total_paid_tax_excl isPrice ❌     total_paid_real isPrice ✔️     total_products isPrice ✔️     total_products_wt isPrice ✔️     total_shipping isPrice ❌     total_shipping_tax_incl isPrice ❌     total_shipping_tax_excl isPrice ❌     carrier_tax_rate isFloat ❌     total_wrapping isPrice ❌     total_wrapping_tax_incl isPrice ❌     total_wrapping_tax_excl isPrice ❌     round_mode isUnsignedId ❌     round_type isUnsignedId ❌     conversion_rate isFloat ✔️     reference  ❌     associations  ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
     </item>
     
     <item>
@@ -363,7 +381,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/products/</guid>
-      <description>Resources for Products Product    Name Format Required Writable Max size Not filterable Description     id_manufacturer isUnsignedId ❌ ✔️   Manufacturer ID   id_supplier isUnsignedId ❌ ✔️   Supplier ID   id_category_default isUnsignedId ❌ ✔️      new  ❌ ✔️      cache_default_attribute  ❌ ✔️      id_default_image  ❌ ✔️  true    id_default_combination  ❌ ✔️  true    id_tax_rules_group isUnsignedId ❌ ✔️   Tax rules group ID   position_in_category  ❌ ✔️  true    manufacturer_name  ❌ ❌  true    quantity  ❌ ❌  true    type  ❌ ✔️  true    id_shop_default isUnsignedId ❌ ✔️   Default shop ID   reference isReference ❌ ✔️ 64     supplier_reference isReference ❌ ✔️ 64     location isReference ❌ ✔️ 64     width isUnsignedFloat ❌ ✔️      height isUnsignedFloat ❌ ✔️      depth isUnsignedFloat ❌ ✔️      weight isUnsignedFloat ❌ ✔️      quantity_discount isBool ❌ ✔️      ean13 isEan13 ❌ ✔️ 13     isbn isIsbn ❌ ✔️ 32     upc isUpc ❌ ✔️ 12     mpn isMpn ❌ ✔️ 40     cache_is_pack isBool ❌ ✔️      cache_has_attachments isBool ❌ ✔️      is_virtual isBool ❌ ✔️      state isUnsignedId ❌ ✔️      additional_delivery_times isUnsignedId ❌ ✔️      delivery_in_stock isGenericName ❌ ✔️ 255     delivery_out_stock isGenericName ❌ ✔️ 255     on_sale isBool ❌ ✔️      online_only isBool ❌ ✔️      ecotax isPrice ❌ ✔️      minimal_quantity isUnsignedInt ❌ ✔️      low_stock_threshold isInt ❌ ✔️      low_stock_alert isBool ❌ ✔️      price isPrice ✔️ ✔️      wholesale_price isPrice ❌ ✔️      unity isString ❌ ✔️      unit_price_ratio  ❌ ✔️      additional_shipping_cost isPrice ❌ ✔️      customizable isUnsignedInt ❌ ✔️      text_fields isUnsignedInt ❌ ✔️      uploadable_files isUnsignedInt ❌ ✔️      active isBool ❌ ✔️      redirect_type isString ❌ ✔️      id_type_redirected isUnsignedId ❌ ✔️      available_for_order isBool ❌ ✔️      available_date isDateFormat ❌ ✔️      show_condition isBool ❌ ✔️      condition isGenericName ❌ ✔️      show_price isBool ❌ ✔️      indexed isBool ❌ ✔️      visibility isProductVisibility ❌ ✔️      advanced_stock_management isBool ❌ ✔️      date_add isDate ❌ ✔️      date_upd isDate ❌ ✔️      pack_stock_type isUnsignedInt ❌ ✔️      meta_description isGenericName ❌ ✔️ 512     meta_keywords isGenericName ❌ ✔️ 255     meta_title isGenericName ❌ ✔️ 255     link_rewrite isLinkRewrite ❌ ✔️ 128     name isCatalogName ❌ ✔️ 128     description isCleanHtml ❌ ✔️      description_short isCleanHtml ❌ ✔️      available_now isGenericName ❌ ✔️ 255     available_later IsGenericName ❌ ✔️ 255     associations  ❌ ✔️       Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+      <description>Resources for Products Product    Name Format Required Writable Max size Not filterable Description     id_manufacturer isUnsignedId ❌ ✔️   Manufacturer ID   id_supplier isUnsignedId ❌ ✔️   Supplier ID   id_category_default isUnsignedId ❌ ✔️      new  ❌ ✔️      cache_default_attribute  ❌ ✔️      id_default_image  ❌ ✔️  true    id_default_combination  ❌ ✔️  true    id_tax_rules_group isUnsignedId ❌ ✔️   Tax rules group ID   position_in_category  ❌ ✔️  true    manufacturer_name  ❌ ❌  true    quantity  ❌ ❌  true    type  ❌ ✔️  true    id_shop_default isUnsignedId ❌ ✔️   Default shop ID   reference isReference ❌ ✔️ 64     supplier_reference isReference ❌ ✔️ 64     location isString ❌ ✔️ 255     width isUnsignedFloat ❌ ✔️      height isUnsignedFloat ❌ ✔️      depth isUnsignedFloat ❌ ✔️      weight isUnsignedFloat ❌ ✔️      quantity_discount isBool ❌ ✔️      ean13 isEan13 ❌ ✔️ 13     isbn isIsbn ❌ ✔️ 32     upc isUpc ❌ ✔️ 12     mpn isMpn ❌ ✔️ 40     cache_is_pack isBool ❌ ✔️      cache_has_attachments isBool ❌ ✔️      is_virtual isBool ❌ ✔️      state isUnsignedId ❌ ✔️      additional_delivery_times isUnsignedId ❌ ✔️      delivery_in_stock isGenericName ❌ ✔️ 255     delivery_out_stock isGenericName ❌ ✔️ 255     on_sale isBool ❌ ✔️      online_only isBool ❌ ✔️      ecotax isPrice ❌ ✔️      minimal_quantity isUnsignedInt ❌ ✔️      low_stock_threshold isInt ❌ ✔️      low_stock_alert isBool ❌ ✔️      price isPrice ✔️ ✔️      wholesale_price isPrice ❌ ✔️      unity isString ❌ ✔️      unit_price_ratio  ❌ ✔️      additional_shipping_cost isPrice ❌ ✔️      customizable isUnsignedInt ❌ ✔️      text_fields isUnsignedInt ❌ ✔️      uploadable_files isUnsignedInt ❌ ✔️      active isBool ❌ ✔️      redirect_type isString ❌ ✔️      id_type_redirected isUnsignedId ❌ ✔️      available_for_order isBool ❌ ✔️      available_date isDateFormat ❌ ✔️      show_condition isBool ❌ ✔️      condition isGenericName ❌ ✔️      show_price isBool ❌ ✔️      indexed isBool ❌ ✔️      visibility isProductVisibility ❌ ✔️      advanced_stock_management isBool ❌ ✔️      date_add isDate ❌ ✔️      date_upd isDate ❌ ✔️      pack_stock_type isUnsignedInt ❌ ✔️      meta_description isGenericName ❌ ✔️ 512     meta_keywords isGenericName ❌ ✔️ 255     meta_title isGenericName ❌ ✔️ 255     link_rewrite isLinkRewrite ❌ ✔️ 128     name isCatalogName ❌ ✔️ 128     description isCleanHtml ❌ ✔️      description_short isCleanHtml ❌ ✔️      available_now isGenericName ❌ ✔️ 255     available_later IsGenericName ❌ ✔️ 255     associations  ❌ ✔️       Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://devdocs.prestashop.com/1.7/webservice/resources/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/webservice/resources/search/</guid>
+      <description>Resources for Search Errors    Name Format Required Description     error  ❌     Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34;&amp;gt; &amp;lt;errors&amp;gt; &amp;lt;error&amp;gt; &amp;lt;code&amp;gt;&amp;lt;![CDATA[100]]&amp;gt;&amp;lt;/code&amp;gt; &amp;lt;message&amp;gt;&amp;lt;![CDATA[You have to set both the &amp;#39;language&amp;#39; and &amp;#39;query&amp;#39; parameters to get a result]]&amp;gt;&amp;lt;/message&amp;gt; &amp;lt;/error&amp;gt; &amp;lt;/errors&amp;gt; &amp;lt;/prestashop&amp;gt; </description>
     </item>
     
     <item>
@@ -372,7 +399,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/shop_groups/</guid>
-      <description>Resources for Shop groups Shop_group    Name Format Required Max size Description     name isGenericName ✔️ 64    share_customer isBool ❌     share_order isBool ❌     share_stock isBool ❌     active isBool ❌     deleted isBool ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34;&amp;gt; &amp;lt;shop_group&amp;gt; &amp;lt;id&amp;gt;&amp;lt;![CDATA[]]&amp;gt;&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;&amp;lt;![CDATA[]]&amp;gt;&amp;lt;/name&amp;gt; &amp;lt;share_customer&amp;gt;&amp;lt;![CDATA[]]&amp;gt;&amp;lt;/share_customer&amp;gt; &amp;lt;share_order&amp;gt;&amp;lt;![CDATA[]]&amp;gt;&amp;lt;/share_order&amp;gt; &amp;lt;share_stock&amp;gt;&amp;lt;!</description>
+      <description>Resources for Shop groups Shop_group    Name Format Required Max size Description     name isGenericName ✔️ 64    color isColor ❌     share_customer isBool ❌     share_order isBool ❌     share_stock isBool ❌     active isBool ❌     deleted isBool ❌      Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
     </item>
     
     <item>
@@ -426,7 +453,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/webservice/resources/stock_availables/</guid>
-      <description>Resources for Stock availables Stock_available    Name Format Required Max size Description     id_product isUnsignedId ✔️  Product ID   id_product_attribute isUnsignedId ✔️  Product attribute ID   id_shop isUnsignedId ❌  Shop ID   id_shop_group isUnsignedId ❌  Shop group ID   quantity isInt ✔️     depends_on_stock isBool ✔️     out_of_stock isInt ✔️     location isString ❌ 255     Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
+      <description>Resources for Stock availables Stock_available    Name Format Required Max size Description     id_product isUnsignedId ✔️  Product ID   id_product_attribute isUnsignedId ✔️  Product attribute ID   id_shop isUnsignedId ❌  Shop ID   id_shop_group isUnsignedId ❌  Shop group ID   quantity isInt ✔️ 10    depends_on_stock isBool ✔️     out_of_stock isInt ✔️     location isString ❌ 255     Blank schema &amp;lt;prestashop xmlns:xlink=&amp;#34;http://www.</description>
     </item>
     
     <item>

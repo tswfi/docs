@@ -954,7 +954,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/reference/</loc>
-    <lastmod>2021-02-26T10:29:24+01:00</lastmod>
+    <lastmod>2021-03-17T16:36:02+01:00</lastmod>
   </url>
   
   <url>
@@ -1213,6 +1213,11 @@
   </url>
   
   <url>
+    <loc>https://devdocs.prestashop.com/1.7/webservice/resources/attachments/</loc>
+    <lastmod>2021-03-17T15:52:11+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/documentation/shortcodes/callout/</loc>
     <lastmod>2020-07-16T12:55:36+02:00</lastmod>
   </url>
@@ -1273,7 +1278,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/combinations/</loc>
-    <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+    <lastmod>2021-03-17T15:51:58+01:00</lastmod>
   </url>
   
   <url>
@@ -1308,7 +1313,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/customer_messages/</loc>
-    <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+    <lastmod>2021-03-17T15:44:37+01:00</lastmod>
   </url>
   
   <url>
@@ -1318,7 +1323,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/customers/</loc>
-    <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+    <lastmod>2021-03-17T15:44:37+01:00</lastmod>
   </url>
   
   <url>
@@ -1404,6 +1409,11 @@
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/image_types/</loc>
     <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devdocs.prestashop.com/1.7/webservice/resources/images/</loc>
+    <lastmod>2021-03-17T15:52:22+01:00</lastmod>
   </url>
   
   <url>
@@ -1558,7 +1568,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/orders/</loc>
-    <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+    <lastmod>2021-03-17T15:44:37+01:00</lastmod>
   </url>
   
   <url>
@@ -1703,7 +1713,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/products/</loc>
-    <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+    <lastmod>2021-03-17T15:44:37+01:00</lastmod>
   </url>
   
   <url>
@@ -1727,6 +1737,11 @@
   </url>
   
   <url>
+    <loc>https://devdocs.prestashop.com/1.7/webservice/resources/search/</loc>
+    <lastmod>2021-03-17T15:52:30+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://devdocs.prestashop.com/1.7/project/security-policy/</loc>
     <lastmod>2020-07-30T17:42:18+02:00</lastmod>
   </url>
@@ -1738,7 +1753,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/shop_groups/</loc>
-    <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+    <lastmod>2021-03-17T15:44:37+01:00</lastmod>
   </url>
   
   <url>
@@ -1788,7 +1803,7 @@
   
   <url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/stock_availables/</loc>
-    <lastmod>2020-09-15T10:40:15+02:00</lastmod>
+    <lastmod>2021-03-17T15:44:37+01:00</lastmod>
   </url>
   
   <url>
