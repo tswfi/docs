@@ -21,15 +21,15 @@
     <title>Global JavaScript components :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1616406083" rel="stylesheet">
-    <link href="/css/syntax-github.css?1616406083" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1616406083" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1616406083" rel="stylesheet">
-    <link href="/css/auto-complete.css?1616406083" rel="stylesheet">
-    <link href="/css/style.css?1616406083" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1616592297" rel="stylesheet">
+    <link href="/css/syntax-github.css?1616592297" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1616592297" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1616592297" rel="stylesheet">
+    <link href="/css/auto-complete.css?1616592297" rel="stylesheet">
+    <link href="/css/style.css?1616592297" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1616406083"></script>
+    <script src="/js/jquery-3.3.1.min.js?1616592297"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1616406083"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1616406083"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1616592297"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1616592297"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1616406083"></script>
+<script type="text/javascript" src="/js/search.js?1616592297"></script>
 
     
   </div>
@@ -10506,7 +10506,11 @@
     <div id="toc-title">Table of Contents</div>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#global-javascript-components">Global JavaScript components?</a></li>
+    <li><a href="#global-javascript-components">Global JavaScript components</a>
+      <ul>
+        <li><a href="#how-to-use">How to use</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -16661,7 +16665,7 @@
 
 
 
-<h1 id="global-javascript-components">Global JavaScript components?</h1>
+<h1 id="global-javascript-components">Global JavaScript components</h1>
 
 <div class="magic-version-pill" data-version="1.7.8" data-title="New in PrestaShop 1.7.8"></div>
 
@@ -16674,7 +16678,7 @@
 <li><code>instance</code> which contains every instances of initiated components.</li>
 </ul>
 <p>It allows module developers to avoid importing path such as <code>../../../../admin-dev/themes/new-module/js/components/translatable-field</code> because it was making hard to add a CI in order to build the module.</p>
-<p>## How to use?</p>
+<h2 id="how-to-use">How to use</h2>
 <p>There is an event sent after the execution of <code>initPrestashopComponents</code> which you can stick on: <code>PSComponentsInitiated</code>.</p>
 <p>If you have the <code>events</code> package, you&rsquo;ll be able to catch the event like this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">EventEmitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;PSComponentsInitiated&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -16706,9 +16710,9 @@
 <footer class="article-footer">
 	
 <div>
-  Last updated on February 1, 2021
+  Last updated on March 24, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/ece20eb9b1e4c386d3068b99618a4deb2a4cc8b7">"fix min ver" (ece20eb9)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/6c4f076114732b723f924445cdb1cade1bd9039e">"Fix broken title" (6c4f0761)</a>
   
 </div>
 
@@ -16729,19 +16733,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1616406084"></script>
-    <script src="/js/perfect-scrollbar.min.js?1616406084"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1616406084"></script>
-    <script src="/js/jquery.sticky.js?1616406084"></script>
-    <script src="/js/featherlight.min.js?1616406084"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1616406084"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1616406084"></script>
-    <script src="/js/learn.js?1616406084"></script>
-    <script src="/js/hugo-learn.js?1616406084"></script>
-    <script src="/js/main.js?1616406084"></script>
+    <script src="/js/clipboard.min.js?1616592297"></script>
+    <script src="/js/perfect-scrollbar.min.js?1616592297"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1616592297"></script>
+    <script src="/js/jquery.sticky.js?1616592297"></script>
+    <script src="/js/featherlight.min.js?1616592297"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1616592297"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1616592297"></script>
+    <script src="/js/learn.js?1616592297"></script>
+    <script src="/js/hugo-learn.js?1616592297"></script>
+    <script src="/js/main.js?1616592297"></script>
 
-    <link href="/mermaid/mermaid.css?1616406084" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1616406084"></script>
+    <link href="/mermaid/mermaid.css?1616592297" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1616592297"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
