@@ -14,10 +14,8 @@
       <guid>https://devdocs.prestashop.com/1.7/modules/concepts/hooks/list-of-hooks/</guid>
       <description>List of hooks in PrestaShop 1.7 Update notes A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
  actionDeleteProductInCartAfter has been divided into two hooks:  actionObjectProductInCartDeleteBefore. actionObjectProductInCartDeleteAfter.   displayProductButtons has been renamed into displayProductAdditionalInfo.
-Don’t worry, we kept an alias :)  Full list Search hooks No hooks found
-   action&amp;lt;AdminControllerClassName&amp;gt;&amp;lt;Action&amp;gt;After Called after performing &amp;lt;Action&amp;gt; in any &amp;lt;AdminController&amp;gt; Located in: /classes/controller/AdminController.php
-Parameters:
-&amp;lt;?php array( &amp;#39;controller&amp;#39; =&amp;gt; (AdminController), &amp;#39;return&amp;#39; =&amp;gt; (mixed) );  action&amp;lt;AdminControllerClassName&amp;gt;&amp;lt;Action&amp;gt;Before Called before performing &amp;lt;Action&amp;gt; in any &amp;lt;AdminController&amp;gt; Located in: /classes/controller/AdminController.</description>
+Don’t worry, we kept an alias :)  Full list Search tip: Some hooks are generated dynamically, so their names are documented in a generic way.
+For example, actionAdminCustomersFormModifier is documented as action&amp;lt;AdminControllerClassName&amp;gt;FormModifier, so you won&amp;rsquo;t find it if you search for the exact name.</description>
     </item>
     
     <item>

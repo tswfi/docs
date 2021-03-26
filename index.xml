@@ -375,10 +375,8 @@ How to add row actions to Grid? Let&amp;rsquo;s take an example from Category gr
       <guid>https://devdocs.prestashop.com/1.7/modules/concepts/hooks/list-of-hooks/</guid>
       <description>List of hooks in PrestaShop 1.7 Update notes A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
  actionDeleteProductInCartAfter has been divided into two hooks:  actionObjectProductInCartDeleteBefore. actionObjectProductInCartDeleteAfter.   displayProductButtons has been renamed into displayProductAdditionalInfo.
-Don’t worry, we kept an alias :)  Full list Search hooks No hooks found
-   action&amp;lt;AdminControllerClassName&amp;gt;&amp;lt;Action&amp;gt;After Called after performing &amp;lt;Action&amp;gt; in any &amp;lt;AdminController&amp;gt; Located in: /classes/controller/AdminController.php
-Parameters:
-&amp;lt;?php array( &amp;#39;controller&amp;#39; =&amp;gt; (AdminController), &amp;#39;return&amp;#39; =&amp;gt; (mixed) );  action&amp;lt;AdminControllerClassName&amp;gt;&amp;lt;Action&amp;gt;Before Called before performing &amp;lt;Action&amp;gt; in any &amp;lt;AdminController&amp;gt; Located in: /classes/controller/AdminController.</description>
+Don’t worry, we kept an alias :)  Full list Search tip: Some hooks are generated dynamically, so their names are documented in a generic way.
+For example, actionAdminCustomersFormModifier is documented as action&amp;lt;AdminControllerClassName&amp;gt;FormModifier, so you won&amp;rsquo;t find it if you search for the exact name.</description>
     </item>
     
     <item>
@@ -1797,15 +1795,6 @@ How do we use the UIKit? We use it by adding it into our npm dependency, and the
     </item>
     
     <item>
-      <title>Activate a language in PrestaShop</title>
-      <link>https://devdocs.prestashop.com/1.7/development/internationalization/activate-a-language-in-prestashop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devdocs.prestashop.com/1.7/development/internationalization/activate-a-language-in-prestashop/</guid>
-      <description>Activate a language in PrestaShop Most languages are available in Crowdin for translation, but not all are available in PrestaShop (International &amp;gt; Translations &amp;gt; Add a language). Indeed, because of a low completion level on Crowdin, we do not send the translations to PrestaShop. However, it can be smart to add a language if its translators are very active and want to see the results of their Crowdin translations quickly in their own shop.</description>
-    </item>
-    
-    <item>
       <title>Adding module links in the back-office side menu</title>
       <link>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/admin-controllers/tabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2249,6 +2238,17 @@ Execution flow Legacy controllers work best when a Controller performs a single 
       <description>License &amp;amp; license compatibility In order to protect PrestaShop users from patent trolls, it&amp;rsquo;s important to make sure that all content included and distributed with PrestaShop is covered under homogeneous license terms.
 The PrestaShop Core software is released under the OSL 3.0 license. Therefore, all original work included in PrestaShop itself must be released under that license as well.
 PrestaShop&amp;rsquo;s Native Modules and the Classic theme are released under the AFL 3.</description>
+    </item>
+    
+    <item>
+      <title>Localization packs</title>
+      <link>https://devdocs.prestashop.com/1.7/development/internationalization/localization-packs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/development/internationalization/localization-packs/</guid>
+      <description>Localization packs Wordings in the software are exported into Crowdin, a translation platform. This allows contributors to translate these into all supported languages.
+Each night, a cron job fetches translations from Crowdin, updates the PrestaShop/TranslationFiles repository with new updates, and deploys translations to domain i18n.prestashop.com.
+i18n.prestashop.com is a domain hosted by PrestaShop company to store all supported Languages Localization Packages. This is the domain where localization packs are downloaded when you use the &amp;ldquo;Download a Language Pack&amp;rdquo; feature in Back Office.</description>
     </item>
     
     <item>
