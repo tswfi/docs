@@ -3200,7 +3200,8 @@ Example title   </description>
       <guid>https://devdocs.prestashop.com/1.7/development/components/form/types-reference/yes-and-no-choice/</guid>
       <description>YesAndNoChoiceType The YesAndNoChoiceType represents select input with options Yes and No.
 Type options    Option Type Default Description     choices array array By default Yes/No choices are defined   required boolean false Whether field is required or not    Required Javascript components None.
-Preview example   YesAndNoChoiceType rendered in form   </description>
+Code example Add YesAndNoChoiceType to your form.
+&amp;lt;?php use Symfony\Component\Form\AbstractType; use PrestaShopBundle\Form\Admin\Type\YesAndNoChoiceType; class SomeType extends AbstractType { public function buildForm(FormBuilderInterface $builder, array $options) { $builder-&amp;gt;add(&amp;#39;yesandnochoicetype&amp;#39;, YesAndNoChoiceType::class, [ &amp;#39;choices&amp;#39; =&amp;gt; [ &amp;#39;Yes&amp;#39; =&amp;gt; true, &amp;#39;No&amp;#39; =&amp;gt; false, ], ]); } } Preview example   YesAndNoChoiceType rendered in form   </description>
     </item>
     
     <item>
