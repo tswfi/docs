@@ -12,8 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/basics/keeping-up-to-date/backup/</guid>
-      <description>How to backup PrestaShop Before starting anything, you must think first about safety. Any modification made on a shop could break it, so you must make sure all your data has been backed up before going further. This basically implies saving two things: your files and your database.
-We will give you all the details you may need to run an upgrade, but we can’t be held responsible for any damage caused to your shop during the process.</description>
+      <description>How to backup PrestaShop Important
+It is strongly recommended not to leave your backups at the root of your store or in another place where could be exposed on publicly.
+ Before starting anything, you must think first about safety. Any modification made on a shop could break it, so you must make sure all your data has been backed up before going further. This basically implies saving two things: your files and your database.</description>
     </item>
     
     <item>

@@ -21,15 +21,15 @@
     <title>How to backup PrestaShop :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1617721484" rel="stylesheet">
-    <link href="/css/syntax-github.css?1617721484" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1617721484" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1617721484" rel="stylesheet">
-    <link href="/css/auto-complete.css?1617721484" rel="stylesheet">
-    <link href="/css/style.css?1617721484" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1617829475" rel="stylesheet">
+    <link href="/css/syntax-github.css?1617829475" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1617829475" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1617829475" rel="stylesheet">
+    <link href="/css/auto-complete.css?1617829475" rel="stylesheet">
+    <link href="/css/style.css?1617829475" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1617721484"></script>
+    <script src="/js/jquery-3.3.1.min.js?1617829475"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1617721484"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1617721484"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1617829475"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1617829475"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1617721484"></script>
+<script type="text/javascript" src="/js/search.js?1617829475"></script>
 
     
   </div>
@@ -16678,6 +16678,11 @@
 
 
 <h1 id="how-to-backup-prestashop">How to backup PrestaShop</h1>
+
+<div class="notices warning" ><p><strong>Important</strong></p>
+<p>It is strongly recommended not to leave your backups at the root of your store or in another place where could be exposed on publicly.</p>
+</div>
+
 <p>Before starting anything, you must think first about safety.
 Any modification made on a shop could break it, so you must make sure all your data has been backed up before going further. This basically implies saving two things: your files and your database.</p>
 <p>We will give you all the details you may need to run an upgrade, but we can’t be held responsible for any damage caused to your shop during the process. That’s why we strongly recommend you to follow this backup step.</p>
@@ -16709,7 +16714,7 @@ In a Windows or Linux terminal, run the following command to create a file <code
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mysqldump yourdbname &gt; dump.sql
 </code></pre></div><p>With <code>yourdbname</code> an example name for the PrestaShop database.</p>
 <p>Your server is likely to require credentials. These details can also be provided as parameters:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mysqldump -h&lt;IP_or_hostname&gt; -u&lt;user&gt; -p db1 &gt; dump.sql
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mysqldump -h &lt;IP_or_hostname&gt; -u &lt;user&gt; --single-transaction --create-options -ecqQ -p db1 &gt; dump.sql
 </code></pre></div><p>If you do not remember your database name or credentials, you can find them in your configuration files:</p>
 <ul>
 <li>PrestaShop 1.6: <code>config/settings.inc.php</code></li>
@@ -16746,9 +16751,9 @@ To get the same file content as the <code>mysqldump</code> method, the following
 <footer class="article-footer">
 	
 <div>
-  Last updated on November 24, 2020
+  Last updated on April 6, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/44dffb2c7c151acb29e7f564834f5297bbf24aa7">"Some improvements for Keeping Up To Date content" (44dffb2c)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/73b0f68de84589c0961b7845ae71119941460b73">"Improve ` How to backup PrestaShop` doc" (73b0f68d)</a>
   
 </div>
 
@@ -16769,19 +16774,19 @@ To get the same file content as the <code>mysqldump</code> method, the following
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1617721484"></script>
-    <script src="/js/perfect-scrollbar.min.js?1617721484"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1617721484"></script>
-    <script src="/js/jquery.sticky.js?1617721484"></script>
-    <script src="/js/featherlight.min.js?1617721484"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1617721484"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1617721484"></script>
-    <script src="/js/learn.js?1617721484"></script>
-    <script src="/js/hugo-learn.js?1617721484"></script>
-    <script src="/js/main.js?1617721484"></script>
+    <script src="/js/clipboard.min.js?1617829475"></script>
+    <script src="/js/perfect-scrollbar.min.js?1617829475"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1617829475"></script>
+    <script src="/js/jquery.sticky.js?1617829475"></script>
+    <script src="/js/featherlight.min.js?1617829475"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1617829475"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1617829475"></script>
+    <script src="/js/learn.js?1617829475"></script>
+    <script src="/js/hugo-learn.js?1617829475"></script>
+    <script src="/js/main.js?1617829475"></script>
 
-    <link href="/mermaid/mermaid.css?1617721484" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1617721484"></script>
+    <link href="/mermaid/mermaid.css?1617829475" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1617829475"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
