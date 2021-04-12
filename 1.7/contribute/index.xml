@@ -12,10 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://devdocs.prestashop.com/1.7/contribute/contribute-reporting-issues/</guid>
-      <description>How to use GitHub to report an issue PrestaShop is using GitHub to track bugs and issues. This is the best place to describe bugs you are witnessing on your PrestaShop installation, and have the developers try to fix it.
-Creating your account To participate, you need to create an account to use the bug tracker.
-Create your account here.
-Fill all fields and validate your account request, then follow the different steps.</description>
+      <description>How to use GitHub to report an issue PrestaShop uses GitHub to track bugs and issues. This is the best place to report the bugs you are witnessing on your PrestaShop shop.
+You need a free GitHub account to collaborate. If you don&amp;rsquo;t have one yet, you can create it here. Creating an issue To create your first issue, go to the list of issues and click on the &amp;ldquo;New issue&amp;rdquo; button on the right.</description>
     </item>
     
     <item>

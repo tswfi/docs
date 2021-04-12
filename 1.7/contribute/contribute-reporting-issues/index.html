@@ -21,15 +21,15 @@
     <title>How to use GitHub to report an issue :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618231417" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618231417" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618231417" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618231417" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618231417" rel="stylesheet">
-    <link href="/css/style.css?1618231417" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1618251539" rel="stylesheet">
+    <link href="/css/syntax-github.css?1618251539" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1618251539" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1618251539" rel="stylesheet">
+    <link href="/css/auto-complete.css?1618251539" rel="stylesheet">
+    <link href="/css/style.css?1618251539" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618231417"></script>
+    <script src="/js/jquery-3.3.1.min.js?1618251539"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618231417"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618231417"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1618251539"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1618251539"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618231417"></script>
+<script type="text/javascript" src="/js/search.js?1618251539"></script>
 
     
   </div>
@@ -10502,9 +10502,9 @@
   <ul>
     <li><a href="#how-to-use-github-to-report-an-issue">How to use GitHub to report an issue</a>
       <ul>
-        <li><a href="#creating-your-account">Creating your account</a></li>
         <li><a href="#creating-an-issue">Creating an issue</a></li>
         <li><a href="#best-practices-for-writing-an-issue">Best practices for writing an issue</a></li>
+        <li><a href="#what-happens-after-you-submit-your-issue">What happens after you submit your issue</a></li>
       </ul>
     </li>
   </ul>
@@ -16658,59 +16658,53 @@
 
 
 <h1 id="how-to-use-github-to-report-an-issue">How to use GitHub to report an issue</h1>
-<p>PrestaShop is using GitHub to track bugs and issues. This is the best place to describe bugs you are witnessing on your PrestaShop installation, and have the developers try to fix it.</p>
-<h2 id="creating-your-account">Creating your account</h2>
-<p>To participate, you need to create an account to use the bug tracker.</p>
-<p><a href="https://github.com/join">Create your account here</a>.</p>
-<p><img src="../img/github-create-account.png" alt="Sign up form"></p>
-<p>Fill all fields and validate your account request, then follow the different steps.</p>
-<p>Once your account is validated, <a href="https://github.com/login">click here to log in</a>.</p>
+<p>PrestaShop uses GitHub to track bugs and issues. This is the best place to report the bugs you are witnessing on your PrestaShop shop.</p>
+
+<div class="notices tip" >You need a free GitHub account to collaborate. If you don&rsquo;t have one yet, you can <a href="https://github.com/join">create it here</a>.</div>
+
 <h2 id="creating-an-issue">Creating an issue</h2>
-<p>You can now create your first issue:</p>
-<ul>
-<li>Go to the <a href="https://github.com/PrestaShop/PrestaShop/issues">list of issues</a></li>
-<li>Click on the &ldquo;New issue&rdquo; button on the right.</li>
-<li>Choose between a &ldquo;Bug report&rdquo;, or a &ldquo;Feature request&rdquo;, and click on &ldquo;Get started&rdquo;</li>
-</ul>
+<p>To create your first issue, go to the <a href="https://github.com/PrestaShop/PrestaShop/issues">list of issues</a> and click on the &ldquo;New issue&rdquo; button on the right. Or just <a href="https://github.com/PrestaShop/PrestaShop/issues/new/choose">click here</a>.</p>
+<p><img src="../img/github-new-issue.png" alt="Issue or Feature request"></p>
+<p>Choose between a &ldquo;Bug report&rdquo;, or a &ldquo;Feature request&rdquo;, and click on &ldquo;Get started&rdquo;</p>
 <p><img src="../img/github-select-issue-type.png" alt="Issue or Feature request"></p>
 <p>A text editor appears:</p>
 <p><img src="../img/github-issue-editor.png" alt="Issue or Feature request"></p>
 <p>To fill the required information, just use the text editor. You can use the &ldquo;preview&rdquo; tab to see how your issue will be published.</p>
-<p>There are four main sections:</p>
+<p>There are five main sections:</p>
 <ol>
-<li><strong>Describe the bug</strong>, a clear and concise description of what the bug is.</li>
-<li><strong>To Reproduce</strong>, describe the different steps and information to reproduce the issue.</li>
-<li><strong>Screenshots</strong>, add screenshots in this section.</li>
-<li><strong>Additional information</strong>, like your version of PHP and Mysql and your server configuration.</li>
-<li>Click the &ldquo;Submit new issue&rdquo; button when you are done.</li>
+<li><strong>Describe the bug</strong> – a clear and concise description of what went wrong.</li>
+<li><strong>Expected behavior</strong> – describe what you expected to happen instead.</li>
+<li><strong>Steps to Reproduce</strong> – describe the different steps and information to reproduce the issue.</li>
+<li><strong>Screenshots</strong> – add screenshots in this section.</li>
+<li><strong>Additional information</strong> – like your version of PHP and MySQL, as well as any other relevant server configuration.</li>
 </ol>
+<p>Click the &ldquo;Submit new issue&rdquo; button when you are done.</p>
 <h2 id="best-practices-for-writing-an-issue">Best practices for writing an issue</h2>
 <p>When writing a bug report, please use these guidelines:</p>
 <ul>
 <li>Make sure you can reproduce your bug every time.</li>
-<li>Make sure your software is up to date.
-<ul>
-<li>Ideally, test an in-development version to see whether your bug has already been fixed.</li>
-</ul>
-</li>
-<li>Search in github issues to see whether your bug has already been reported.</li>
-<li>Write a clear summary.</li>
-<li>Write precise steps to reproduce. Be specific and verbose: do not fear to give details on how you did reproduce the bug.
-<ul>
-<li>After your steps, precisely describe the observed result and the expected result.</li>
-</ul>
-</li>
+<li>Make sure your software is up to date.</li>
+<li>Ideally, test the latest <a href="https://nightly.prestashop.com/">nightly build development version</a> to see whether your bug has already been fixed.</li>
+<li>Search in GitHub issues to see whether your bug has already been reported.</li>
+<li>Write a clear summary. Describe the observed result what you expected to happen instead.</li>
+<li>Write precise steps to reproduce. Be specific and verbose: do not fear to give details on how you did reproduce the bug.</li>
 </ul>
 <p>These are inspired by <a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines">Mozilla&rsquo;s own guidelines</a>.</p>
-<p>GitHub provides very good documentation about how to write <a href="https://guides.github.com/features/issues/">issues</a> with its <a href="https://github.github.com/gfm/">flavoured Markdown</a>. It is possible to <a href="https://help.github.com/articles/creating-and-highlighting-code-blocks/">highlight code syntax</a>, <a href="https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/">add pictures</a>, or even to <a href="https://help.github.com/articles/autolinked-references-and-urls/">link issues and pull requests</a>.</p>
+
+<div class="notices tip" >GitHub provides very good documentation about how to write <a href="https://guides.github.com/features/issues/">issues</a> with its <a href="https://github.github.com/gfm/">flavoured Markdown</a>. It is possible to <a href="https://help.github.com/articles/creating-and-highlighting-code-blocks/">highlight code syntax</a>, <a href="https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/">add pictures</a>, or even to <a href="https://help.github.com/articles/autolinked-references-and-urls/">link issues and pull requests</a>.</div>
+
+<h2 id="what-happens-after-you-submit-your-issue">What happens after you submit your issue</h2>
+<p>If your issue can be reproduced using a clean install, it is likely that the problem effectively is due to a software defect.
+In that case, the bug will receive a severity classification, and be added to the backlog so that it can be fixed in a future release.</p>
+<p>To find out more, read <a href="/1.7/contribute/contribution-process/how-issues-are-sorted/">How issues are sorted</a>.</p>
 
 
 <footer class="article-footer">
 	
 <div>
-  Last updated on December 7, 2020
+  Last updated on April 12, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/6f370887abbfa774822f368a142bb38e51fd546b">"Remove old forge reference." (6f370887)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/f2aebe4f52359e985e7d430bfedb96e8b34d2825">"Improve how to report issue guide" (f2aebe4f)</a>
   
 </div>
 
@@ -16731,19 +16725,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618231417"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618231417"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618231417"></script>
-    <script src="/js/jquery.sticky.js?1618231417"></script>
-    <script src="/js/featherlight.min.js?1618231417"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618231417"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618231417"></script>
-    <script src="/js/learn.js?1618231417"></script>
-    <script src="/js/hugo-learn.js?1618231417"></script>
-    <script src="/js/main.js?1618231417"></script>
+    <script src="/js/clipboard.min.js?1618251539"></script>
+    <script src="/js/perfect-scrollbar.min.js?1618251539"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1618251539"></script>
+    <script src="/js/jquery.sticky.js?1618251539"></script>
+    <script src="/js/featherlight.min.js?1618251539"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1618251539"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1618251539"></script>
+    <script src="/js/learn.js?1618251539"></script>
+    <script src="/js/hugo-learn.js?1618251539"></script>
+    <script src="/js/main.js?1618251539"></script>
 
-    <link href="/mermaid/mermaid.css?1618231417" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618231417"></script>
+    <link href="/mermaid/mermaid.css?1618251539" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1618251539"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
