@@ -21,15 +21,15 @@
     <title>Adding module links in the back-office side menu :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1617970743" rel="stylesheet">
-    <link href="/css/syntax-github.css?1617970743" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1617970743" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1617970743" rel="stylesheet">
-    <link href="/css/auto-complete.css?1617970743" rel="stylesheet">
-    <link href="/css/style.css?1617970743" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1618231421" rel="stylesheet">
+    <link href="/css/syntax-github.css?1618231421" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1618231421" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1618231421" rel="stylesheet">
+    <link href="/css/auto-complete.css?1618231421" rel="stylesheet">
+    <link href="/css/style.css?1618231421" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1617970743"></script>
+    <script src="/js/jquery-3.3.1.min.js?1618231421"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1617970743"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1617970743"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1618231421"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1618231421"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1617970743"></script>
+<script type="text/javascript" src="/js/search.js?1618231421"></script>
 
     
   </div>
@@ -10522,10 +10522,15 @@
       <ul>
         <li><a href="#tabs-registration">Tabs registration</a></li>
         <li><a href="#how-to-define-a-tab-in-the-menu">How to define a tab in the menu</a></li>
-        <li><a href="#how-to-add-names-and-their-translations-to-a-tab">How to add names and their translations to a tab</a>
+        <li><a href="#how-to-specify-the-menu-label">How to specify the menu label</a>
           <ul>
-            <li><a href="#option-1-use-the-same-name-for-all-languages">Option 1: Use the same name for all languages</a></li>
-            <li><a href="#option-2-use-a-different-name-for-each-language">Option 2: Use a different name for each language</a></li>
+            <li><a href="#option-1-use-the-same-label-for-all-languages">Option 1: Use the same label for all languages</a></li>
+            <li><a href="#option-2-use-a-different-name-for-each-language">Option 2: Use a different name for each language</a>
+              <ul>
+                <li><a href="#since-prestashop-178">Since PrestaShop 1.7.8</a></li>
+                <li><a href="#alternative---declare-your-translations">Alternative - declare your translations</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><a href="#which-parent-to-choose">Which parent to choose?</a></li>
@@ -16710,44 +16715,162 @@
 <p>On the PrestaShop back office, the links on the side menu are linked to AdminControllers and ModuleAdminController classes. The first ones come from the PrestaShop Core, but the second ones are defined by the modules. If you want to add a link to your ModuleAdminControllers in the back office sidebar, this guide is for you.</p>
 <h2 id="tabs-registration">Tabs registration</h2>
 <p>In order to register new links, open your main module class.</p>
-<p>We will now use a property called $tabs, storing an array of link details. Each of them contains a class (= link) to add in the side menu.</p>
+<p>We will now use a property called <code>$tabs</code>, storing an array of link details. Each of them contains a class (= link) to add in the side menu.</p>
 <h2 id="how-to-define-a-tab-in-the-menu">How to define a tab in the menu</h2>
 <p>Depending on the options you provide, your links won’t be displayed the same way:</p>
-<ul>
-<li><strong>class_name</strong>: <strong>Mandatory</strong>, this is the file called when the merchant will click on your link. This is the class name without the <code>Controller</code> part.</li>
-<li><strong>name</strong>: Optional, this is the name displayed in the menu. If not provided, the class name is shown instead.</li>
-<li><strong>parent_class_name</strong>: Optional if you want to display it in a subcategory. Go farther in this document to see available values.</li>
-<li><strong>icon</strong>: Optional, will display an icon when the menu is reduced.</li>
-<li><strong>visible</strong>: Optional, is of boolean type to determine whether you want to display the tab or not.</li>
-</ul>
-<h2 id="how-to-add-names-and-their-translations-to-a-tab">How to add names and their translations to a tab</h2>
-<p>By default, your tab will be displayed in the menu with its class name. If you want to use something more explicit, you can set the name property.</p>
-<h3 id="option-1-use-the-same-name-for-all-languages">Option 1: Use the same name for all languages</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th style="text-align:center">Required</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class_name</code></td>
+<td style="text-align:center">Yes</td>
+<td>String</td>
+<td>Class called when the user will click on your link. This is the class name without the <code>Controller</code> part.</td>
+<td><code>&quot;AdminGamification&quot;</code></td>
+</tr>
+<tr>
+<td><code>route_name</code></td>
+<td style="text-align:center">No</td>
+<td>String</td>
+<td>
+<span class="version-pill" title="New in PrestaShop 1.7.7">
+  1.7.7
+</span>
+
+ Symfony route name, if your controller is Symfony-based</td>
+<td><code>&quot;gamification_configuration&quot;</code></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td style="text-align:center">No</td>
+<td>String|String[]</td>
+<td>Label displayed in the menu. If not provided, the class name is shown instead.</td>
+<td><code>&quot;Merchant Expertise&quot;</code></td>
+</tr>
+<tr>
+<td><code>parent_class_name</code></td>
+<td style="text-align:center">No</td>
+<td>String</td>
+<td>The parent menu, if you want to display it in a subcategory. Go farther in this document to see available values.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td style="text-align:center">No</td>
+<td>String</td>
+<td>Icon name to use, if any</td>
+<td><code>&quot;shopping_basket&quot;</code></td>
+</tr>
+<tr>
+<td><code>visible</code></td>
+<td style="text-align:center">No</td>
+<td>Boolean</td>
+<td>Whether you want to display the tab or not. Hidden tabs are used when you don&rsquo;t need a menu item but you still need to handle access rights.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>wording </code></td>
+<td style="text-align:center">No</td>
+<td>String</td>
+<td>
+<span class="version-pill" title="New in PrestaShop 1.7.8">
+  1.7.8
+</span>
+
+ The translation key to use to translate the menu label.</td>
+<td><code>&quot;Merchant Expertise&quot;</code></td>
+</tr>
+<tr>
+<td><code>wording_domain</code></td>
+<td style="text-align:center">No</td>
+<td>String</td>
+<td>
+<span class="version-pill" title="New in PrestaShop 1.7.8">
+  1.7.8
+</span>
+
+ The translation domain to use to translate the menu label.</td>
+<td><code>&quot;Modules.Gamification.Admin&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-specify-the-menu-label">How to specify the menu label</h2>
+<p>By default, your tab will be displayed in the menu with its class name. If you want to use a different label, you can set the <code>name</code> property. This label can be translated in two ways.</p>
+<h3 id="option-1-use-the-same-label-for-all-languages">Option 1: Use the same label for all languages</h3>
 <p>If you want to add the same name to all available and active languages available on the shop, just set the ‘name’ key with a single string:</p>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">public</span> <span class="nv">$tabs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-    <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Merchant Expertise&#39;</span><span class="p">,</span> <span class="c1">// One name for all langs
-</span><span class="c1"></span>        <span class="s1">&#39;class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AdminGamification&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;visible&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
-        <span class="s1">&#39;parent_class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ShopParameters&#39;</span><span class="p">,</span>
-<span class="p">));</span>
+<span class="k">class</span> <span class="nc">mymodule</span> <span class="k">extends</span> <span class="nx">Module</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$tabs</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Merchant Expertise&#39;</span><span class="p">,</span> <span class="c1">// One name for all langs
+</span><span class="c1"></span>            <span class="s1">&#39;class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AdminGamification&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;visible&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s1">&#39;parent_class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ShopParameters&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">];</span>
+    
+    <span class="c1">// ...
+</span><span class="c1"></span><span class="p">}</span>
 </code></pre></div><h3 id="option-2-use-a-different-name-for-each-language">Option 2: Use a different name for each language</h3>
-<p>You can also add your translations per locale (ex.: fr-FR) or per language (ex.: fr), both are valid.</p>
-<p>If a language is installed on the shop but is not found in your translated names, it will be automatically associated to the first value of the array.</p>
-<p>Hence, we advise you to define the English value first.</p>
+<h4 id="since-prestashop-178">Since PrestaShop 1.7.8</h4>
+<p>Since 
+<span class="version-pill" title="New in PrestaShop 1.7.8">
+  1.7.8
+</span>
+
+ you can declare a <code>wording</code> and <code>wording_domain</code> to leverage the translation system. This will allow the menu to be translated automatically using either the provided translation catalogues or the translation interface.</p>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">public</span> <span class="nv">$tabs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-    <span class="k">array</span><span class="p">(</span>
-        <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-            <span class="s1">&#39;en&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Merchant Expertise&#39;</span><span class="p">,</span> <span class="c1">// Default value should be first
-</span><span class="c1"></span>            <span class="s1">&#39;fr&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Expertise PrestaShop&#39;</span><span class="p">,</span>
-            <span class="o">...</span>
-        <span class="p">),</span>
-        <span class="s1">&#39;class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AdminGamification&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;parent_class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ShopParameters&#39;</span><span class="p">,</span>
-<span class="p">));</span>
-</code></pre></div><h2 id="which-parent-to-choose">Which parent to choose?</h2>
+<span class="k">class</span> <span class="nc">mymodule</span> <span class="k">extends</span> <span class="nx">Module</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$tabs</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Merchant Expertise&#39;</span><span class="p">,</span> <span class="c1">// Fallback when the translation is unavailable
+</span><span class="c1"></span>            <span class="s1">&#39;class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AdminGamification&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;parent_class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ShopParameters&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;wording&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Merchant Expertise&#39;</span><span class="p">,</span> <span class="c1">// Translation key
+</span><span class="c1"></span>            <span class="s1">&#39;wording_domain&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Modules.Gamification.Admin&#39;</span><span class="p">,</span> <span class="c1">// Translation domain
+</span><span class="c1"></span>        <span class="p">],</span>
+    <span class="p">];</span>
+
+    <span class="c1">// ...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h4 id="alternative---declare-your-translations">Alternative - declare your translations</h4>
+<p>In previous PrestaShop versions, <code>wording</code> and <code>wording_domain</code> will be ignored. In that case, you will have to provide translations for every language upfront.</p>
+<p>You can add your translations per locale (ex.: <code>fr-FR</code>) or per language (ex.: <code>fr</code>) – both are valid.</p>
+<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">class</span> <span class="nc">mymodule</span> <span class="k">extends</span> <span class="nx">Module</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$tabs</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">&#39;en&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Merchant Expertise&#39;</span><span class="p">,</span> <span class="c1">// Fallback value
+</span><span class="c1"></span>                <span class="s1">&#39;fr&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Expertise PrestaShop&#39;</span><span class="p">,</span>
+                <span class="o">...</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AdminGamification&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;parent_class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ShopParameters&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;wording&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Merchant Expertise&#39;</span><span class="p">,</span> <span class="c1">// Ignored in PS &lt; 1.7.8
+</span><span class="c1"></span>            <span class="s1">&#39;wording_domain&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Modules.Gamification.Admin&#39;</span><span class="p">,</span> <span class="c1">// Ignored in PS &lt; 1.7.8
+</span><span class="c1"></span>        <span class="p">],</span>
+    <span class="p">];</span>
+
+    <span class="c1">// ...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div>
+<div class="notices tip" ><strong>Ordering is important</strong>.
+If the user&rsquo;s language is not found in your translated names, the first value in the array will be used as fallback.
+Hence, we advise you to define the English value first.</div>
+
+<h2 id="which-parent-to-choose">Which parent to choose?</h2>
 <p>Here is the default structure of the side-menu from PrestaShop at the moment this page is written. You can choose an element from this list to use as a parent.</p>
 <ul>
 <li>AdminDashboard</li>
@@ -16875,7 +16998,7 @@
 </ul>
 <h2 id="how-to-check-the-tabs-registration">How to check the tabs registration</h2>
 <p>Once you&rsquo;re done, just install (or reset) your module.</p>
-<p>The $tabs property will be read from PrestaShop and the tabs will be automatically displayed on the side menu. They will stay as long as your module is installed.</p>
+<p>The <code>$tabs</code> property will be read from PrestaShop and the tabs will be automatically displayed on the side menu. They will stay as long as your module is installed.</p>
 <h2 id="tab-permissions-accesses-and-roles">Tab permissions, accesses and roles</h2>
 <p>When you create a new <code>Tab</code> it automatically creates the appropriate roles in <code>Tab::initAccess</code> based on the <code>class_name</code>. For example using <code>AdminLinkWidget</code> as the class name will create the following roles:</p>
 <ul>
@@ -16929,7 +17052,7 @@ So you need to insert your tab manually during your module installation:</p>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">use</span> <span class="nx">Language</span><span class="p">;</span>
 
-<span class="k">class</span> <span class="nc">example_module_mailtheme</span> <span class="k">extends</span> <span class="nx">Module</span>
+<span class="k">class</span> <span class="nc">Example_module_mailtheme</span> <span class="k">extends</span> <span class="nx">Module</span>
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">install</span><span class="p">()</span>
     <span class="p">{</span>
@@ -17046,8 +17169,8 @@ So you need to insert your tab manually during your module installation:</p>
 <span class="k">class</span> <span class="nc">Ps_Linklist</span> <span class="k">extends</span> <span class="nx">Module</span>
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
-        <span class="o">...</span>
-        <span class="nv">$tabNames</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="c1">// ...
+</span><span class="c1"></span>        <span class="nv">$tabNames</span> <span class="o">=</span> <span class="p">[];</span>
         <span class="k">foreach</span> <span class="p">(</span><span class="nx">Language</span><span class="o">::</span><span class="na">getLanguages</span><span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$lang</span><span class="p">)</span> <span class="p">{</span>
             <span class="nv">$tabNames</span><span class="p">[</span><span class="nv">$lang</span><span class="p">[</span><span class="s1">&#39;locale&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trans</span><span class="p">(</span><span class="s1">&#39;Link List&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(),</span> <span class="s1">&#39;Modules.Linklist.Admin&#39;</span><span class="p">,</span> <span class="nv">$lang</span><span class="p">[</span><span class="s1">&#39;locale&#39;</span><span class="p">]);</span>
         <span class="p">}</span>
@@ -17058,10 +17181,12 @@ So you need to insert your tab manually during your module installation:</p>
                 <span class="s1">&#39;visible&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
                 <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$tabNames</span><span class="p">,</span>
                 <span class="s1">&#39;parent_class_name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;AdminParentThemes&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;wording&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Link List&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;wording_domain&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Modules.Linklist.Admin&#39;</span>
             <span class="p">],</span>
         <span class="p">];</span>
-        <span class="o">...</span>
-    <span class="p">}</span>
+        <span class="c1">// ...
+</span><span class="c1"></span>    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <div class="notices note" ><p><strong>Hidden Tabs</strong></p>
@@ -17073,9 +17198,9 @@ So you need to insert your tab manually during your module installation:</p>
 <footer class="article-footer">
 	
 <div>
-  Last updated on September 14, 2020
+  Last updated on April 8, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/74ddfa9b026e30f319355682c81bf90bb80b0b8a">"writing mistake" (74ddfa9b)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/de89c0f9cfc618355a266d293fb053dfe287959f">"Improve Tab documentation" (de89c0f9)</a>
   
 </div>
 
@@ -17096,19 +17221,19 @@ So you need to insert your tab manually during your module installation:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1617970743"></script>
-    <script src="/js/perfect-scrollbar.min.js?1617970743"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1617970743"></script>
-    <script src="/js/jquery.sticky.js?1617970743"></script>
-    <script src="/js/featherlight.min.js?1617970743"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1617970743"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1617970743"></script>
-    <script src="/js/learn.js?1617970743"></script>
-    <script src="/js/hugo-learn.js?1617970743"></script>
-    <script src="/js/main.js?1617970743"></script>
+    <script src="/js/clipboard.min.js?1618231421"></script>
+    <script src="/js/perfect-scrollbar.min.js?1618231421"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1618231421"></script>
+    <script src="/js/jquery.sticky.js?1618231421"></script>
+    <script src="/js/featherlight.min.js?1618231421"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1618231421"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1618231421"></script>
+    <script src="/js/learn.js?1618231421"></script>
+    <script src="/js/hugo-learn.js?1618231421"></script>
+    <script src="/js/main.js?1618231421"></script>
 
-    <link href="/mermaid/mermaid.css?1617970743" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1617970743"></script>
+    <link href="/mermaid/mermaid.css?1618231421" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1618231421"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
