@@ -495,18 +495,6 @@ It is an Active Record kind of class (see: Active record pattern). The table att
     </item>
     
     <item>
-      <title>Release a native PrestaShop module</title>
-      <link>https://devdocs.prestashop.com/1.7/project/release/release-a-native-ps-module/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://devdocs.prestashop.com/1.7/project/release/release-a-native-ps-module/</guid>
-      <description>Release a new version of a native PrestaShop module Some modules are embedded within PrestaShop ZIP archives and loaded through Composer package manager. They consequently are listed in the composer.json of the Core project.
-This is what we call &amp;ldquo;native PrestaShop modules&amp;rdquo;. The source code of these modules is hosted on GitHub.
-This page explains what is needed to release these modules.
-Requirements Mandatory requirements The module should be valid which means:</description>
-    </item>
-    
-    <item>
       <title>Retrieve a resource</title>
       <link>https://devdocs.prestashop.com/1.7/webservice/tutorials/prestashop-webservice-lib/retrieve-resource/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1794,6 +1782,18 @@ How do we use the UIKit? We use it by adding it into our npm dependency, and the
     </item>
     
     <item>
+      <title>Release a native PrestaShop module</title>
+      <link>https://devdocs.prestashop.com/1.7/project/maintainers-guide/release-a-native-ps-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/project/maintainers-guide/release-a-native-ps-module/</guid>
+      <description>Release a new version of a native PrestaShop module Some modules are embedded within PrestaShop ZIP archives and loaded through Composer package manager. They consequently are listed in the composer.json of the Core project.
+This is what we call &amp;ldquo;native PrestaShop modules&amp;rdquo;. The source code of these modules is hosted on GitHub.
+This page explains what is needed to release these modules.
+Requirements Mandatory requirements The module should be valid which means:</description>
+    </item>
+    
+    <item>
       <title>Adding module links in the back-office side menu</title>
       <link>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/admin-controllers/tabs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2157,6 +2157,17 @@ if (&amp;#39;AdminOrders&amp;#39; === Tools::getValue(&amp;#39;controller&amp;#3
       <description>I need help If you have questions or need help, please do not open a GitHub issue as we use GitHub issues only to discuss about bugs and new features for the PrestaShop project.
 The very best place to start looking for an answer is:
  Here (the Developer documentation), if you are a developer The User&amp;rsquo;s guide if you are a user  If you are a developer and you think there is a missing item in the Developer documentation, consider creating an issue on the Documentation Repository.</description>
+    </item>
+    
+    <item>
+      <title>Image FAQ</title>
+      <link>https://devdocs.prestashop.com/1.7/faq/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/faq/image/</guid>
+      <description>Image FAQ Q: Why can I not use more than 9 999 999 images?
+A: The limitation of the .htaccess file prevents the use of more than 9 999 999 images because there is a limit of 9 back references ($1, $2, $3,&amp;hellip; $9) in mod_rewrite. The $10 $11 etc back references are being interpreted as just $1.
+You can exceed this limitation by adding the needed rules in your .</description>
     </item>
     
     <item>

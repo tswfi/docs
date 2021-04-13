@@ -18,6 +18,17 @@ The very best place to start looking for an answer is:
     </item>
     
     <item>
+      <title>Image FAQ</title>
+      <link>https://devdocs.prestashop.com/1.7/faq/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devdocs.prestashop.com/1.7/faq/image/</guid>
+      <description>Image FAQ Q: Why can I not use more than 9 999 999 images?
+A: The limitation of the .htaccess file prevents the use of more than 9 999 999 images because there is a limit of 9 back references ($1, $2, $3,&amp;hellip; $9) in mod_rewrite. The $10 $11 etc back references are being interpreted as just $1.
+You can exceed this limitation by adding the needed rules in your .</description>
+    </item>
+    
+    <item>
       <title>Open Source Project FAQ</title>
       <link>https://devdocs.prestashop.com/1.7/faq/open-source-project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

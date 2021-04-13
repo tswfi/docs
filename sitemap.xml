@@ -182,9 +182,6 @@
     <loc>https://devdocs.prestashop.com/1.7/webservice/tutorials/prestashop-webservice-lib/</loc>
     <lastmod>2020-06-18T12:44:09+02:00</lastmod>
   </url><url>
-    <loc>https://devdocs.prestashop.com/1.7/project/release/release-a-native-ps-module/</loc>
-    <lastmod>2020-07-16T17:36:31+02:00</lastmod>
-  </url><url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/tutorials/prestashop-webservice-lib/retrieve-resource/</loc>
     <lastmod>2020-06-18T12:44:09+02:00</lastmod>
   </url><url>
@@ -204,7 +201,7 @@
     <lastmod>2020-10-06T13:53:05+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/concepts/widgets/</loc>
-    <lastmod>2020-06-16T15:31:44+02:00</lastmod>
+    <lastmod>2021-04-13T09:26:14+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/creation/adding-configuration-page/</loc>
     <lastmod>2020-06-16T15:31:44+02:00</lastmod>
@@ -707,6 +704,9 @@
     <loc>https://devdocs.prestashop.com/1.7/development/native-modules/</loc>
     <lastmod>2020-11-25T10:01:35+01:00</lastmod>
   </url><url>
+    <loc>https://devdocs.prestashop.com/1.7/project/maintainers-guide/release-a-native-ps-module/</loc>
+    <lastmod>2021-04-12T22:20:04+02:00</lastmod>
+  </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/sample-modules/</loc>
     <lastmod>2020-04-08T10:52:01+02:00</lastmod>
   </url><url>
@@ -840,6 +840,9 @@
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/faq/i-need-help/</loc>
     <lastmod>2020-11-04T17:13:04+01:00</lastmod>
+  </url><url>
+    <loc>https://devdocs.prestashop.com/1.7/faq/image/</loc>
+    <lastmod>2021-04-13T06:49:45+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/image_types/</loc>
     <lastmod>2020-09-15T10:40:15+02:00</lastmod>
@@ -1049,7 +1052,7 @@
     <lastmod>2020-07-30T17:42:18+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/faq/shipping/</loc>
-    <lastmod>2020-06-16T15:31:44+02:00</lastmod>
+    <lastmod>2021-04-12T10:49:00+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/shop_groups/</loc>
     <lastmod>2021-03-17T15:44:37+01:00</lastmod>
