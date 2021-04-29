@@ -21,15 +21,16 @@
     <title>Javascript events :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575552" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575552" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575552" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575552" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575552" rel="stylesheet">
-    <link href="/css/style.css?1618575552" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698207" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698207" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698207" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698207" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698207" rel="stylesheet">
+    
+    <link href="/style.css?1619698207" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575552"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698207"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575552"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575552"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698207"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698207"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575552"></script>
+<script type="text/javascript" src="/js/search.js?1619698207"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -10600,6 +10643,7 @@
         <li><a href="#events">Events</a>
           <ul>
             <li><a href="#dispatch-an-event">Dispatch an event</a></li>
+            <li><a href="#listening-to-events">Listening to events</a></li>
             <li><a href="#dispatched-events">Dispatched events</a></li>
             <li><a href="#triggering-delegated-events">Triggering delegated events</a></li>
           </ul>
@@ -12644,6 +12688,36 @@
       
       
 
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
       
         
     
@@ -16842,12 +16916,28 @@
 <h3 id="dispatch-an-event">Dispatch an event</h3>
 <p>The best way to trigger an event is to use the <code>prestashop</code> object. Here is a simple example:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">prestashop</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span>
-  <span class="s1">&#39;product updated&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;myEventName&#39;</span><span class="p">,</span>
   <span class="p">{</span>
-    <span class="nx">dataForm</span><span class="o">:</span> <span class="nx">someSelector</span><span class="p">.</span><span class="nx">serializeArray</span><span class="p">(),</span>
-    <span class="nx">productOption</span><span class="o">:</span> <span class="mi">3</span>
+    <span class="nx">myData1</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">myData2</span><span class="o">:</span> <span class="mi">3</span>
   <span class="p">}</span>
 <span class="p">);</span>
+</code></pre></div><h3 id="listening-to-events">Listening to events</h3>
+<p>You can also react to an event emitted by <code>prestashop.emit</code>. Here is a simple example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">prestashop</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">prestashop</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span>
+    <span class="s1">&#39;myEventName&#39;</span><span class="p">,</span>
+    <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">eventDatas</span> <span class="o">=</span> <span class="p">{};</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">event</span> <span class="o">&amp;&amp;</span> <span class="nx">event</span><span class="p">.</span><span class="nx">reason</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">eventDatas</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="nx">my_data_1</span><span class="o">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">reason</span><span class="p">.</span><span class="nx">myData1</span><span class="p">,</span>
+          <span class="nx">my_data_2</span><span class="o">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">reason</span><span class="p">.</span><span class="nx">myData2</span>
+        <span class="p">};</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div><h3 id="dispatched-events">Dispatched events</h3>
 <p>PrestaShop will dispatch many events from <code>core.js</code> so your code can rely on it:</p>
 <table>
@@ -16921,9 +17011,9 @@ after the DOM was modified (like after an ajax call).</p>
 <footer class="article-footer">
   
 <div>
-  Last updated on March 9, 2021
+  Last updated on April 23, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/17d1874432878b6148ffb8767042d4d495734255">"Fix typo" (17d18744)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/5720a2bfe9179c22afa8b5a60e2fcfa1ddadc6ad">"Improve events datas - more generic" (5720a2bf)</a>
   
 </div>
 
@@ -16944,19 +17034,19 @@ after the DOM was modified (like after an ajax call).</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575552"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575552"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575552"></script>
-    <script src="/js/jquery.sticky.js?1618575552"></script>
-    <script src="/js/featherlight.min.js?1618575552"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575552"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575552"></script>
-    <script src="/js/learn.js?1618575552"></script>
-    <script src="/js/hugo-learn.js?1618575552"></script>
-    <script src="/js/main.js?1618575552"></script>
-
-    <link href="/mermaid/mermaid.css?1618575552" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575552"></script>
+    <script src="/js/clipboard.min.js?1619698207"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698207"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698207"></script>
+    <script src="/js/jquery.sticky.js?1619698207"></script>
+    <script src="/js/featherlight.min.js?1619698207"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698207"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698207"></script>
+    <script src="/js/learn.js?1619698207"></script>
+    <script src="/js/hugo-learn.js?1619698207"></script>
+    
+    <script src="/main.js?1619698207"></script>
+    <link href="/mermaid/mermaid.css?1619698207" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698207"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

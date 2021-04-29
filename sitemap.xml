@@ -9,7 +9,7 @@
     <lastmod>2020-05-26T15:43:09+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/testing/basic-checks/</loc>
-    <lastmod>2020-05-18T10:38:58+02:00</lastmod>
+    <lastmod>2021-04-23T16:50:42+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/basics/</loc>
     <lastmod>2018-12-07T14:25:25+01:00</lastmod>
@@ -54,7 +54,7 @@
     <lastmod>2021-03-12T14:02:47+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/testing/introduction/</loc>
-    <lastmod>2020-08-03T18:21:52+02:00</lastmod>
+    <lastmod>2021-04-21T18:07:52+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/project/release/patch-release-lifecycle/</loc>
     <lastmod>2020-09-21T22:25:00+01:00</lastmod>
@@ -63,7 +63,7 @@
     <lastmod>2020-09-24T14:50:48+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/creation/module-translation/new-system/</loc>
-    <lastmod>2020-10-04T13:12:30+03:00</lastmod>
+    <lastmod>2021-04-22T11:23:48+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/scale/webservers/</loc>
     <lastmod>2020-08-13T15:57:06+02:00</lastmod>
@@ -90,7 +90,7 @@
     <lastmod>2020-05-18T10:38:58+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/creation/module-translation/classic-system/</loc>
-    <lastmod>2020-09-11T23:05:13+02:00</lastmod>
+    <lastmod>2021-04-29T11:07:57+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/contribute-pull-requests/contribute_using_localhost/</loc>
     <lastmod>2020-10-04T15:51:24+02:00</lastmod>
@@ -117,7 +117,7 @@
     <lastmod>2020-08-30T21:11:21+03:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/contribution-process/how-pull-requests-are-processed/</loc>
-    <lastmod>2020-07-30T11:38:30+02:00</lastmod>
+    <lastmod>2021-04-27T10:39:14+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/documentation/how/</loc>
     <lastmod>2020-08-30T20:28:25+03:00</lastmod>
@@ -171,7 +171,7 @@
     <lastmod>2021-03-12T12:13:35+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/testing/ci-cd/</loc>
-    <lastmod>2020-11-11T12:34:49+01:00</lastmod>
+    <lastmod>2021-02-16T18:26:27+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/contribute-pull-requests/contribute_using_docker/</loc>
     <lastmod>2021-02-12T23:01:24+01:00</lastmod>
@@ -225,7 +225,7 @@
     <lastmod>2020-09-20T09:48:33+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/database/structure/</loc>
-    <lastmod>2020-06-16T15:31:44+02:00</lastmod>
+    <lastmod>2021-04-19T09:11:52+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/concepts/forms/</loc>
     <lastmod>2020-06-16T15:31:44+02:00</lastmod>
@@ -240,7 +240,7 @@
     <lastmod>2020-09-22T18:26:36+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/themes/reference/javascript-events/</loc>
-    <lastmod>2021-03-09T14:16:51+01:00</lastmod>
+    <lastmod>2021-04-23T10:55:26+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/modules/concepts/controllers/kpi-blocks/</loc>
     <lastmod>2020-07-10T14:43:44+02:00</lastmod>
@@ -264,7 +264,7 @@
     <lastmod>2020-09-21T22:24:44+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/basics/introduction/</loc>
-    <lastmod>2020-10-25T21:18:11+01:00</lastmod>
+    <lastmod>2021-04-19T11:03:12+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/tutorials/advanced-use/manage-multishop/</loc>
     <lastmod>2020-06-18T12:44:09+02:00</lastmod>
@@ -378,13 +378,16 @@
     <lastmod>2021-04-12T12:56:42+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/html/</loc>
-    <lastmod>2021-03-06T06:49:28+02:00</lastmod>
+    <lastmod>2021-04-21T17:59:12+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/image/</loc>
     <lastmod>2020-06-16T15:31:44+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/architecture/introduction/</loc>
     <lastmod>2020-09-04T17:02:08+02:00</lastmod>
+  </url><url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/introduction/</loc>
+    <lastmod>2021-04-22T11:23:48+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/components/grid/columns-reference/link/</loc>
     <lastmod>2020-06-16T15:31:44+02:00</lastmod>
@@ -423,10 +426,7 @@
     <lastmod>2020-06-16T15:31:44+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/</loc>
-    <lastmod>2020-08-30T21:11:21+03:00</lastmod>
-  </url><url>
-    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/translation-domains/</loc>
-    <lastmod>2019-04-16T10:01:30+02:00</lastmod>
+    <lastmod>2021-04-22T11:23:48+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/contribution-guidelines/writing-a-good-commit-message/</loc>
     <lastmod>2020-08-20T17:02:26+02:00</lastmod>
@@ -530,6 +530,9 @@
     <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/tools-for-theme-designers/</loc>
     <lastmod>2021-03-09T10:46:25+01:00</lastmod>
   </url><url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/translation-domains/</loc>
+    <lastmod>2021-04-22T11:23:48+02:00</lastmod>
+  </url><url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/tutorials/</loc>
     <lastmod>2020-06-18T12:44:09+02:00</lastmod>
   </url><url>
@@ -546,7 +549,7 @@
     <lastmod>2021-02-20T22:04:16+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/basics/installation/configuration/</loc>
-    <lastmod>2021-01-27T21:43:31+01:00</lastmod>
+    <lastmod>2021-04-19T11:03:12+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/forms/cqrs-usage-in-forms/</loc>
     <lastmod>2020-08-30T16:28:10+03:00</lastmod>
@@ -564,7 +567,7 @@
     <lastmod>2020-06-16T15:31:44+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/basics/keeping-up-to-date/upgrade/</loc>
-    <lastmod>2020-11-24T18:36:46+01:00</lastmod>
+    <lastmod>2021-04-24T11:02:28+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/architecture/legacy/</loc>
     <lastmod>2020-09-04T17:02:08+02:00</lastmod>
@@ -598,6 +601,9 @@
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/upgrade-module/upgrade-process-steps/</loc>
     <lastmod>2020-11-25T10:01:35+01:00</lastmod>
+  </url><url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/using-the-translator/</loc>
+    <lastmod>2021-04-27T11:21:29+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/documentation/how/writing-markdown/</loc>
     <lastmod>2020-08-30T21:11:21+03:00</lastmod>
@@ -635,6 +641,9 @@
     <loc>https://devdocs.prestashop.com/1.7/themes/reference/templates/listing/</loc>
     <lastmod>2021-03-09T15:03:52+01:00</lastmod>
   </url><url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/native-module-translation/</loc>
+    <lastmod>2021-04-22T11:23:48+02:00</lastmod>
+  </url><url>
     <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/theme-organization/</loc>
     <lastmod>2020-10-23T11:49:14+02:00</lastmod>
   </url><url>
@@ -667,6 +676,9 @@
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/theme-yml/</loc>
     <lastmod>2021-03-12T11:05:52+01:00</lastmod>
+  </url><url>
+    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/translation-tips/</loc>
+    <lastmod>2021-04-22T11:23:48+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/internationalization/</loc>
     <lastmod>2021-03-26T13:51:43+01:00</lastmod>
@@ -729,7 +741,7 @@
     <lastmod>2020-09-15T10:40:15+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/themes/getting-started/asset-management/</loc>
-    <lastmod>2021-03-09T11:34:07+01:00</lastmod>
+    <lastmod>2021-04-23T15:10:18+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/webservice/resources/attachments/</loc>
     <lastmod>2021-03-17T15:52:11+01:00</lastmod>
@@ -904,9 +916,6 @@
     <loc>https://devdocs.prestashop.com/1.7/development/components/form/types-reference/money-with-suffix/</loc>
     <lastmod>2020-09-03T23:13:44+01:00</lastmod>
   </url><url>
-    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/native-module-translation/</loc>
-    <lastmod>2020-08-30T21:11:21+03:00</lastmod>
-  </url><url>
     <loc>https://devdocs.prestashop.com/1.7/contribute/documentation/shortcodes/notice/</loc>
     <lastmod>2019-10-31T14:55:47+01:00</lastmod>
   </url><url>
@@ -1040,7 +1049,7 @@
     <lastmod>2021-03-17T15:44:37+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/page-reference/back-office/order/refunds/</loc>
-    <lastmod>2020-11-27T12:02:45+01:00</lastmod>
+    <lastmod>2021-04-22T09:16:24+02:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/project/release/</loc>
     <lastmod>2020-07-16T17:36:31+02:00</lastmod>
@@ -1184,9 +1193,6 @@
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/components/tinymce/</loc>
     <lastmod>2021-02-01T16:37:42+01:00</lastmod>
-  </url><url>
-    <loc>https://devdocs.prestashop.com/1.7/development/internationalization/translation/translation-tips/</loc>
-    <lastmod>2021-03-12T10:24:36+01:00</lastmod>
   </url><url>
     <loc>https://devdocs.prestashop.com/1.7/development/components/form/types-reference/translatable/</loc>
     <lastmod>2020-08-30T20:28:25+03:00</lastmod>

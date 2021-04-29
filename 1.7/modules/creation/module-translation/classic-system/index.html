@@ -21,15 +21,16 @@
     <title>Classic translation system :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575545" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575545" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575545" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575545" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575545" rel="stylesheet">
-    <link href="/css/style.css?1618575545" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698200" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698200" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698200" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698200" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698200" rel="stylesheet">
+    
+    <link href="/style.css?1619698200" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575545"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698200"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575545"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575545"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698200"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698200"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575545"></script>
+<script type="text/javascript" src="/js/search.js?1619698200"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -12730,6 +12773,36 @@
     
   
       
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
     
   
       
@@ -16855,15 +16928,14 @@
 
 
 <h1 id="classic-module-translation-system">Classic module translation system</h1>
-<p>The classic translation system is a heritage from previous versions of PrestaShop and provides retrocompatibility with PrestaShop 1.6. If you plan on supporting only versions 1.7.6 and up, consider using the <a href="/1.7/modules/creation/module-translation/new-system/">New translation system</a>.</p>
+<p>The classic translation system is a heritage from previous versions of PrestaShop and provides retrocompatibility with PrestaShop 1.6.</p>
 
-<div class="notices note" ><p><strong>Native modules work differently</strong></p>
-<p>In PrestaShop 1.7, native modules (the ones bundled with PrestaShop) use a different system.
-Read more about it here: <a href="/1.7/development/internationalization/translation/native-module-translation/">Native module translation</a>.</p>
+<div class="notices tip" ><p><strong>Do you need this?</strong></p>
+<ul>
+<li>If you plan on supporting only versions 1.7.6 and up, consider using the <a href="/1.7/modules/creation/module-translation/new-system/">New translation system</a>.</li>
+<li>Modern (symfony-based) modules and native modules only support the new system.</li>
+</ul>
 </div>
-
-
-<div class="notices info" >Modern (symfony-based) modules can only be translated using the <a href="/1.7/modules/creation/module-translation/new-system/">New translation system</a>.</div>
 
 <h2 id="how-it-works">How it works</h2>
 <p>This system works in two steps.</p>
@@ -17122,7 +17194,7 @@ But as we explained before, this solution is not recommended, because the words 
 </li>
 </ol>
 
-<div class="notices tip" >If you are manually building a translation file to use with the <a href="/1.7/modules/creation/module-translation/new-system/">New translation system</a>, keep in mind the <a href="/1.7/modules/creation/module-translation/new-system/">Backward compatibility constraints</a>.</div>
+<div class="notices tip" >If you are manually building a translation file to use with the <a href="/1.7/modules/creation/module-translation/new-system/">New translation system</a>, keep in mind the <a href="/1.7/modules/creation/module-translation/new-system/#backwards-compatibility">Backward compatibility constraints</a>.</div>
 
 <h2 id="limitations-and-caveats">Limitations and caveats</h2>
 <h3 id="making-your-wordings-appear-in-the-translation-interface">Making your wordings appear in the translation interface</h3>
@@ -17168,9 +17240,9 @@ But as we explained before, this solution is not recommended, because the words 
 <footer class="article-footer">
 	
 <div>
-  Last updated on September 11, 2020
+  Last updated on April 29, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/1dfba79fc47ebe5c992e43c6472d1466def32aab">"variable name correction" (1dfba79f)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/853d23d131bfcfc3f5dbdddc550bfcb34c97da8a">"Fix link" (853d23d1)</a>
   
 </div>
 
@@ -17191,19 +17263,19 @@ But as we explained before, this solution is not recommended, because the words 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575546"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575546"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575546"></script>
-    <script src="/js/jquery.sticky.js?1618575546"></script>
-    <script src="/js/featherlight.min.js?1618575546"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575546"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575546"></script>
-    <script src="/js/learn.js?1618575546"></script>
-    <script src="/js/hugo-learn.js?1618575546"></script>
-    <script src="/js/main.js?1618575546"></script>
-
-    <link href="/mermaid/mermaid.css?1618575546" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575546"></script>
+    <script src="/js/clipboard.min.js?1619698200"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698200"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698200"></script>
+    <script src="/js/jquery.sticky.js?1619698200"></script>
+    <script src="/js/featherlight.min.js?1619698200"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698200"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698200"></script>
+    <script src="/js/learn.js?1619698200"></script>
+    <script src="/js/hugo-learn.js?1619698200"></script>
+    
+    <script src="/main.js?1619698200"></script>
+    <link href="/mermaid/mermaid.css?1619698200" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698200"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

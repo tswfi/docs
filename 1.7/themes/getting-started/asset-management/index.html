@@ -21,15 +21,16 @@
     <title>Asset management :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575552" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575552" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575552" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575552" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575552" rel="stylesheet">
-    <link href="/css/style.css?1618575552" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698207" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698207" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698207" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698207" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698207" rel="stylesheet">
+    
+    <link href="/style.css?1619698207" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575552"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698207"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575552"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575552"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698207"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698207"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575552"></script>
+<script type="text/javascript" src="/js/search.js?1619698207"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -12701,6 +12744,36 @@
     
   
       
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
     
   
       
@@ -17002,6 +17075,21 @@ in the <a href="/1.7/themes/reference/templates/head/">template section</a>.</p>
 </span><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">assets/js/product.js</span><span class="w">
 </span><span class="w">        </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="m">200</span><span class="w">
 </span><span class="w">        </span><span class="nt">attribute</span><span class="p">:</span><span class="w"> </span><span class="l">async</span><span class="w">
+</span></code></pre></div><p>In addition, if you want to include a library hosted in a different server you can use the following syntax:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">assets</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">css</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">all</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">custom-cdn-css</span><span class="w">
+</span><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">//cdn-url.com/external-lib.css</span><span class="w">
+</span><span class="w">        </span><span class="nt">media</span><span class="p">:</span><span class="w"> </span><span class="l">all</span><span class="w">
+</span><span class="w">        </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="m">200</span><span class="w">
+</span><span class="w">        </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l">remote</span><span class="w">
+</span><span class="w">  </span><span class="nt">js</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">all</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">custom-cdn-js</span><span class="w">
+</span><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">//cdn-url.com/external-lib.js</span><span class="w">
+</span><span class="w">        </span><span class="nt">priority</span><span class="p">:</span><span class="w"> </span><span class="m">200</span><span class="w">
+</span><span class="w">        </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l">remote</span><span class="w">
 </span></code></pre></div><h3 id="registering-in-modules">Registering in modules</h3>
 <p>When developing a PrestaShop module, you may want to add specific styles for your templates. The best way is to use the <code>registerStylesheet</code> and <code>registerJavascript</code> methods provided by the parent <code>FrontController</code> class.</p>
 
@@ -17102,9 +17190,9 @@ in the <a href="/1.7/themes/reference/templates/head/">template section</a>.</p>
 <footer class="article-footer">
   
 <div>
-  Last updated on March 9, 2021
+  Last updated on April 23, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/6f4731dd947d3ca0a4d5e4ce48a5e28fec9fce08">"Update _index.md" (6f4731dd)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/e776fb0e1381e57402a39a27ae0cbccc2435ebe3">"Update src/content/1.7/themes/getting-started/asset-management/_index.md" (e776fb0e)</a>
   
 </div>
 
@@ -17125,19 +17213,19 @@ in the <a href="/1.7/themes/reference/templates/head/">template section</a>.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575552"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575552"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575552"></script>
-    <script src="/js/jquery.sticky.js?1618575552"></script>
-    <script src="/js/featherlight.min.js?1618575552"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575552"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575552"></script>
-    <script src="/js/learn.js?1618575552"></script>
-    <script src="/js/hugo-learn.js?1618575552"></script>
-    <script src="/js/main.js?1618575552"></script>
-
-    <link href="/mermaid/mermaid.css?1618575552" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575552"></script>
+    <script src="/js/clipboard.min.js?1619698207"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698207"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698207"></script>
+    <script src="/js/jquery.sticky.js?1619698207"></script>
+    <script src="/js/featherlight.min.js?1619698207"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698207"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698207"></script>
+    <script src="/js/learn.js?1619698207"></script>
+    <script src="/js/hugo-learn.js?1619698207"></script>
+    
+    <script src="/main.js?1619698207"></script>
+    <link href="/mermaid/mermaid.css?1619698207" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698207"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

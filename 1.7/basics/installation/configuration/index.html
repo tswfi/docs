@@ -21,15 +21,16 @@
     <title>Configuration :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575540" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575540" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575540" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575540" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575540" rel="stylesheet">
-    <link href="/css/style.css?1618575540" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698194" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698194" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698194" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698194" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698194" rel="stylesheet">
+    
+    <link href="/style.css?1619698194" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575540"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698194"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575540"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575540"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698194"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698194"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575540"></script>
+<script type="text/javascript" src="/js/search.js?1619698194"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -12709,6 +12752,36 @@
     
   
       
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
     
   
       
@@ -16834,7 +16907,7 @@
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="cm">/* Debug only */</span>
 <span class="nx">define</span><span class="p">(</span><span class="s1">&#39;_PS_MODE_DEV_&#39;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-</code></pre></div><p>You can also enable developer mode directly from your back-office, go to the “Performance” page under the “Advanced parameters” menu and change the following setting: &ldquo;Debug mode&rdquo; to &ldquo;Yes&rdquo;. Don&rsquo;t forget to disable developer mode as soon as you&rsquo;ve done debugging your code.</p>
+</code></pre></div><p>You can also enable developer mode directly from your back-office, go to the “Performance” page under the “Advanced parameters” menu and change the following setting: &ldquo;Debug mode&rdquo; to &ldquo;Yes&rdquo;. Don&rsquo;t forget to disable developer mode as soon as you have finished debugging your code.</p>
 <h2 id="using-the-dump-function">Using the dump() function</h2>
 <p>PrestaShop used to have custom debug functions available for developers: <code>p($variable)</code> and <code>d($variable)</code>. They were used to display the content of a variable, and were really a wrapper around the well-known <code>print_r()</code> method. On top of that, PrestaShop had the <code>ppp()</code> and <code>ddd()</code> functions, which were respectively the aliases of <code>p()</code> and <code>d()</code>; and the various <code>fd()</code>, <code>epr()</code> and <code>dieObject()</code> functions.</p>
 <p>All of this has changed with PrestaShop 1.7: we now rely solely on <a href="https://symfony.com/doc/current/components/var_dumper.html#the-dump-function">Symfony VarDumper&rsquo;s dump()</a> function. You can now rely on a single function instead of having multiple debug functions. The dump() function is very powerful, and is always available on output (even without <code>die()</code>). Moreover, you can use it in your console scripts because this function also has a formatter in CLI mode.</p>
@@ -16890,9 +16963,9 @@
 <footer class="article-footer">
 	
 <div>
-  Last updated on January 27, 2021
+  Last updated on April 19, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/ff847be7b24be478f596d650f6ec22a19f5ec5d8">"Doc improvements" (ff847be7)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/15b673edc594c04db6c35f3d299baaa6910ed4cc">"Improve sentences and hrefs in Basics section" (15b673ed)</a>
   
 </div>
 
@@ -16913,19 +16986,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575540"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575540"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575540"></script>
-    <script src="/js/jquery.sticky.js?1618575540"></script>
-    <script src="/js/featherlight.min.js?1618575540"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575540"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575540"></script>
-    <script src="/js/learn.js?1618575540"></script>
-    <script src="/js/hugo-learn.js?1618575540"></script>
-    <script src="/js/main.js?1618575540"></script>
-
-    <link href="/mermaid/mermaid.css?1618575540" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575540"></script>
+    <script src="/js/clipboard.min.js?1619698194"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698194"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698194"></script>
+    <script src="/js/jquery.sticky.js?1619698194"></script>
+    <script src="/js/featherlight.min.js?1619698194"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698194"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698194"></script>
+    <script src="/js/learn.js?1619698194"></script>
+    <script src="/js/hugo-learn.js?1619698194"></script>
+    
+    <script src="/main.js?1619698194"></script>
+    <link href="/mermaid/mermaid.css?1619698194" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698194"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

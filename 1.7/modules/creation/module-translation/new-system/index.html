@@ -21,15 +21,16 @@
     <title>New translation system :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575546" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575546" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575546" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575546" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575546" rel="stylesheet">
-    <link href="/css/style.css?1618575546" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698200" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698200" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698200" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698200" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698200" rel="stylesheet">
+    
+    <link href="/style.css?1619698200" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575546"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698200"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575546"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575546"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698200"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698200"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575546"></script>
+<script type="text/javascript" src="/js/search.js?1619698200"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -10612,11 +10655,11 @@
             </li>
           </ul>
         </li>
-        <li><a href="#making-your-module-translatable">Making your module translatable</a>
+        <li><a href="#using-translation">Using translation</a>
           <ul>
             <li><a href="#translation-domain">Translation domain</a>
               <ul>
-                <li><a href="#backwards-compatibility">Backwards compatibility</a></li>
+                <li></li>
               </ul>
             </li>
             <li><a href="#php-files">PHP files</a>
@@ -10628,17 +10671,21 @@
             </li>
             <li><a href="#templates">Templates</a>
               <ul>
-                <li><a href="#smarty-files">Smarty files</a></li>
                 <li><a href="#twig-files">Twig files</a></li>
+                <li><a href="#smarty-files">Smarty files</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li><a href="#translating-your-module">Translating your module</a></li>
-        <li><a href="#creating-translation-dictionary-files">Creating translation dictionary files</a></li>
-        <li><a href="#limitations-and-caveats">Limitations and caveats</a>
+        <li><a href="#translating-your-module">Translating your module</a>
           <ul>
             <li><a href="#making-your-wordings-appear-in-the-translation-interface">Making your wordings appear in the translation interface</a></li>
+          </ul>
+        </li>
+        <li><a href="#distributing-your-translations">Distributing your translations</a>
+          <ul>
+            <li><a href="#exporting-translations">Exporting translations</a></li>
+            <li><a href="#before-178">Before 1.7.8</a></li>
           </ul>
         </li>
       </ul>
@@ -12681,6 +12728,36 @@
       
       
 
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
       
         
     
@@ -16864,7 +16941,7 @@
 <h5 id="1-translation-functions-are-used-to-display-your-modules-wordings-in-another-language">1. Translation functions are used to display your module&rsquo;s wordings in another language</h5>
 <p>PrestaShop provides functions that allow PHP files and Smarty/Twig templates to display translated wordings. By leveraging a list of translation sources (including dictionary files from <em>classic translation</em>), a module can use this feature display a wording in another language during runtime.</p>
 <figure>
-    <img src="../img/new-translation-system.jpg"/> <figcaption>
+    <img src="../img/new-translation-system.png"/> <figcaption>
             <h4>How wordings are translated at runtime</h4>
         </figcaption>
 </figure>
@@ -16872,7 +16949,7 @@
 <h5 id="2-creating-module-dictionaries">2. Creating module dictionaries</h5>
 <p>The Back Office&rsquo;s Translation page (<em>International &gt; Translations &gt; Modify Translations</em>) is used to generate module dictionaries. It extracts the module&rsquo;s wordings by analyzing its source code, then inspects a list of sources to compile a list of translations, and finally displays a form that allows you to customize or complete those translations in a given language. Once saved, this information is stored in the Database.</p>
 <figure>
-    <img src="../img/new-translation-workflow.jpg"/> <figcaption>
+    <img src="../img/new-translation-workflow.png"/> <figcaption>
             <h4>Translation workflow</h4>
         </figcaption>
 </figure>
@@ -16880,7 +16957,7 @@
 
 <div class="notices note" >If your module has already been translated using the <a href="/1.7/modules/creation/module-translation/classic-system/">classic translation system</a>, the new translation interface can also source translations from your existing classic translation dictionary files. This means that you can keep your old controllers for compatibility with older PrestaShop versions, and add Symfony controllers for 1.7.6+, without losing your previous translations.</div>
 
-<h2 id="making-your-module-translatable">Making your module translatable</h2>
+<h2 id="using-translation">Using translation</h2>
 <p>To make your module translatable, you need to adapt your module&rsquo;s source code. Find any wording you want to make translatable, then wrap it using the appropriate method as explained below. Once wrapped, your wordings will be ready to be translated through the translation interface.</p>
 
 <div class="notices tip" ><p><strong>By default, wordings are displayed as originally written.</strong></p>
@@ -16893,24 +16970,30 @@
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Modules.Nameofthemodule.Specificpart
 </code></pre></div><p>Translation Domain names are always made of three parts, separated by dots:</p>
 <ol>
-<li>The first part must always be <strong>&ldquo;Modules&rdquo;</strong></li>
-<li><strong>&ldquo;Nameofthemodule&rdquo;</strong> is the name of your module, with some rules:</li>
-</ol>
+<li>
+<p>The first part must always be <strong>&ldquo;Modules&rdquo;</strong></p>
+</li>
+<li>
+<p><strong>&ldquo;Nameofthemodule&rdquo;</strong> is the name of your module, with some rules:</p>
 <ul>
 <li>The first letter must be in upper case, and the rest in lower case (eg. &ldquo;MyModule&rdquo; becomes &ldquo;Mymodule&rdquo;)</li>
 <li>Only word characters (A-z, 0-9) are supported.<br>
 Make sure that the technical name of your module does not contain contains underscores (<code>_</code>) or any other unsupported symbol, or else translation may not work.</li>
 <li>If your module name starts with <code>ps_</code>, that part must be removed. This is an exception to the previous rule.</li>
 </ul>
-<ol start="3">
-<li><strong>&ldquo;Specificpart&rdquo;</strong> allows for contextualization and can be set to whatever you like, following this rules:</li>
-</ol>
+</li>
+<li>
+<p><strong>&ldquo;Specificpart&rdquo;</strong> allows for contextualization and can be set to whatever you like, following this rules:</p>
 <ul>
 <li>The first letter must be in upper case, and the rest in lower case.</li>
 <li>Symbols like dots, dashes and underscores are allowed (but discouraged).</li>
 <li>If you want to use previously-generated classic translation dictionary files, you need to follow a <a href="#backwards-compatibility">specific naming convention for backwards compatibility</a>.<br>
 Otherwise, consider using the <a href="/1.7/development/internationalization/translation/translation-domains/">Native module conventions</a> (<em>&ldquo;Admin&rdquo;</em> or <em>&ldquo;Shop&rdquo;</em>).</li>
 </ul>
+</li>
+</ol>
+
+<div class="callout">
 <h4 id="backwards-compatibility">Backwards compatibility</h4>
 <p>If you want your module to be compatible with previously-generated <a href="/1.7/modules/creation/module-translation/classic-system/">classic translation dictionary files</a>, then the third component of the Translation domain must be set to the name of the file where the wording is used, respecting the following rules:</p>
 <ul>
@@ -16918,6 +17001,9 @@ Otherwise, consider using the <a href="/1.7/development/internationalization/tra
 <li>If the file extension is <code>.tpl</code>, the extension must be removed</li>
 <li>If the file name ends in &ldquo;controller&rdquo;, that part must be removed as well.</li>
 </ul>
+
+</div>
+
 <h5 id="examples">Examples</h5>
 <p>Assuming your module is called &ldquo;my_module&rdquo;:</p>
 <table>
@@ -17020,7 +17106,14 @@ Otherwise, consider using the <a href="/1.7/development/internationalization/tra
 <span class="p">}</span>
 </code></pre></div><p>If you really need to, you can also retrieve a new instance of your module using <code>Module::getInstanceByName('mymodulename')</code>. This should be avoided though, as it&rsquo;s not a good practice.</p>
 <h3 id="templates">Templates</h3>
-<h4 id="smarty-files">Smarty files</h4>
+<h4 id="twig-files">Twig files</h4>
+<p>Wordings in Twig .twig files can be translated using the <code>trans</code> filter. It works similarly as the <code>trans()</code> method described above for PHP files:</p>
+<div class="highlight"><pre class="chroma"><code class="language-twig" data-lang="twig"><span class="c">{# file: something.twig #}</span><span class="x">
+</span><span class="x">
+</span><span class="x"></span><span class="cp">{{</span> <span class="s1">&#39;Welcome to this page!&#39;</span><span class="o">|</span><span class="nf">trans</span><span class="o">({},</span> <span class="s1">&#39;Modules.Mymodule.Admin&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">
+</span></code></pre></div><p>The first parameter can be used to replace tokens in your wording after it&rsquo;s translated:</p>
+<div class="highlight"><pre class="chroma"><code class="language-twig" data-lang="twig"><span class="cp">{{</span> <span class="s1">&#39;Hello %username%!&#39;</span><span class="o">|</span><span class="nf">trans</span><span class="o">({</span><span class="s1">&#39;%username%&#39;</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span><span class="o">},</span> <span class="s1">&#39;Modules.Mymodule.Admin&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">
+</span></code></pre></div><h4 id="smarty-files">Smarty files</h4>
 <p>Wordings in Smarty .tpl files can be translated using the <code>{l}</code> function call, which Smarty will replace by the translation in the current language.</p>
 <p>This function accepts three parameters:</p>
 <ul>
@@ -17032,38 +17125,25 @@ Otherwise, consider using the <a href="/1.7/development/internationalization/tra
 <div class="highlight"><pre class="chroma"><code class="language-smarty" data-lang="smarty"><span class="cp">{</span><span class="c">* file: somefile.tpl *</span><span class="cp">}</span><span class="x">
 </span><span class="x">
 </span><span class="x"></span><span class="cp">{</span><span class="nf">l</span> <span class="na">s</span><span class="o">=</span><span class="s1">&#39;Welcome to this page!&#39;</span> <span class="na">d</span><span class="o">=</span><span class="s1">&#39;Modules.Mymodule.Somefile&#39;</span><span class="cp">}</span><span class="x">
-</span></code></pre></div><h4 id="twig-files">Twig files</h4>
-<p>Wordings in Twig .twig files can be translated using the <code>trans</code> filter. It works similarly as the <code>trans()</code> method described for PHP files above:</p>
-<div class="highlight"><pre class="chroma"><code class="language-twig" data-lang="twig"><span class="c">{# file: something.twig #}</span><span class="x">
-</span><span class="x">
-</span><span class="x"></span><span class="cp">{{</span> <span class="s1">&#39;Welcome to this page!&#39;</span><span class="o">|</span><span class="nf">trans</span><span class="o">({},</span> <span class="s1">&#39;Modules.Mymodule.Admin&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">
-</span></code></pre></div><p>The first parameter can be used to replace tokens in your wording after it&rsquo;s translated:</p>
-<div class="highlight"><pre class="chroma"><code class="language-twig" data-lang="twig"><span class="cp">{{</span> <span class="s1">&#39;Hello %username%!&#39;</span><span class="o">|</span><span class="nf">trans</span><span class="o">({</span><span class="s1">&#39;%username%&#39;</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span><span class="o">},</span> <span class="s1">&#39;Modules.Mymodule.Admin&#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x">
+</span></code></pre></div><p>You can replace placeholders in your translated wordings using the <code>sprintf</code> parameter:</p>
+<div class="highlight"><pre class="chroma"><code class="language-smarty" data-lang="smarty"><span class="cp">{</span><span class="nf">l</span> <span class="na">s</span><span class="o">=</span><span class="s1">&#39;Hello %username%!&#39;</span> <span class="na">sprintf</span><span class="o">=[</span><span class="s1">&#39;%username%&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="o">]</span> <span class="na">d</span><span class="o">=</span><span class="s1">&#39;Modules.Mymodule.Somefile&#39;</span><span class="cp">}</span><span class="x"> }}
 </span></code></pre></div><h2 id="translating-your-module">Translating your module</h2>
-<p>To be translatable through the new translation interface, modules must opt-in. This can be done by declaring this function on your module&rsquo;s main class:</p>
+<p>Modules must opt-in to become translatable using the new Back Office translation interface. This can be done by declaring the following function on your module&rsquo;s main class:</p>
 <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">public</span> <span class="k">function</span> <span class="nf">isUsingNewTranslationSystem</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p>After this:</p>
-<ul>
+<ol>
 <li>Go to the &ldquo;Translations&rdquo; page under the &ldquo;International&rdquo; menu,</li>
 <li>In the &ldquo;Modify translations&rdquo; section, find the &ldquo;Type of translation&rdquo; drop-down and select &ldquo;Installed modules translations&rdquo;,</li>
 <li>Choose the module you want to translate.</li>
 <li>Choose the language you want to translate the module into. The destination language must already be installed to enable translation in it.</li>
 <li>Click the &ldquo;Modify&rdquo; button.</li>
-</ul>
+</ol>
 <p>You will be presented with a page that displays all the wordings for the selected module, grouped by translation domain.</p>
 <p>Once saved, translations are stored in the database in the table <code>ps_translations</code>.</p>
-<h2 id="creating-translation-dictionary-files">Creating translation dictionary files</h2>
-<p>This feature has not been implemented as of 1.7.6.</p>
-<p>If you need to distribute translated wordings with your module, you can either <a href="/1.7/modules/creation/module-translation/classic-system/#editing-a-dictionary-file-manually">write classic dictionary files manually</a>, or export your module&rsquo;s wordings from the database into a file, then import it during the module&rsquo;s install process.</p>
-
-<div class="notices tip" >If you choose to export wordings from the database, you can easily extract only your module&rsquo;s wordings from the <code>ps_translation</code> table by filtering domains that start with <code>ModulesYourmodulename*</code>. You can disregard <code>id_translation</code>, but you will have to match the original <code>lang_id</code> to the shop&rsquo;s one (see <code>ps_lang</code>) when you re-import them.</div>
-
-<p>Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is <a href="https://github.com/PrestaShop/PrestaShop/issues/14968">due to be implemented in 1.7.8</a>.</p>
-<h2 id="limitations-and-caveats">Limitations and caveats</h2>
 <h3 id="making-your-wordings-appear-in-the-translation-interface">Making your wordings appear in the translation interface</h3>
 <p>The translation interface relies on code analysis to &ldquo;discover&rdquo; wordings for translation. Therefore, when declaring wordings in your code, some care is needed in order to make sure they can be discovered.</p>
 <ol>
@@ -17098,14 +17178,51 @@ Otherwise, consider using the <a href="/1.7/development/internationalization/tra
 <div class="highlight"><pre class="chroma"><code class="language-twig" data-lang="twig"><span class="cp">{%</span> <span class="k">trans_default_domain</span> <span class="s1">&#39;Modules.Mymodule.Foo&#39;</span> <span class="cp">%}</span><span class="x">
 </span><span class="x"></span><span class="cp">{{</span> <span class="s1">&#39;Hello world&#39;</span><span class="o">|</span><span class="nf">trans</span> <span class="cp">}}</span><span class="x">
 </span><span class="x"></span><span class="cp">{{</span> <span class="s1">&#39;Something else&#39;</span><span class="o">|</span><span class="nf">trans</span> <span class="cp">}}</span><span class="x">
-</span></code></pre></div>
+</span></code></pre></div><h2 id="distributing-your-translations">Distributing your translations</h2>
+<h3 id="exporting-translations">Exporting translations</h3>
+
+<div class="magic-version-pill" data-version="1.7.8" data-title="New in PrestaShop 1.7.8"></div>
+
+
+<p>Since PrestaShop 1.7.8, you can export all the module&rsquo;s translations into XLF files that you can distribute with your module.</p>
+<p>To export the translation files:</p>
+<ol>
+<li>
+<p>Go to the &ldquo;Translations&rdquo; page under the &ldquo;International&rdquo; menu,</p>
+</li>
+<li>
+<p>In the &ldquo;Export translations&rdquo; section:</p>
+<ul>
+<li>Choose a language,</li>
+<li>Select &ldquo;Installed modules translations&rdquo;, then the module you want to export,</li>
+<li>Click on &ldquo;Export&rdquo;</li>
+</ul>
+</li>
+</ol>
+<p>You can distribute the downloaded dictionaries by placing the extracted files in your module&rsquo;s <code>translations</code> folder, like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">.
+└── mymodule/
+    └── translations/
+        ├── fr_FR/
+        │   ├── ModulesMymoduleFoo.fr_FR.xlf
+        │   └── ModulesMymoduleBar.fr_FR.xlf
+        └── en_US/
+            ├── ModulesMymoduleFoo.en_US.xlf
+            └── ModulesMymoduleBar.en_US.xlf
+</code></pre></div>
+<div class="notices warning" >Note that these files will only work with PrestaShop 1.7.8 and over. If you need to ensure compatibility with previous versions, read below.</div>
+
+<h3 id="before-178">Before 1.7.8</h3>
+<p>If you need to distribute backward-compatible translations, you can either <a href="/1.7/modules/creation/module-translation/classic-system/#editing-a-dictionary-file-manually">write classic dictionary files manually</a>, or export your module&rsquo;s wordings from the database into a file, then import it during the module&rsquo;s install process.</p>
+<p>If you choose to export wordings from the database, you can easily extract your module&rsquo;s wordings from the <code>ps_translation</code> table by filtering domains that start with <code>ModulesYourmodulename*</code>. When inserting the translations in the destination shop, remember to set the appropriate value for <code>id_lang</code> according to the destination shop&rsquo;s language configuration (see table <code>ps_lang</code>) .</p>
+
 
 <footer class="article-footer">
 	
 <div>
-  Last updated on October 4, 2020
+  Last updated on April 22, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/27d403f15bebdb950379edb2cb175870db2bd465">"Forgot to close &#39;" (27d403f1)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/57d599302215ca109f4d8e40a07c6648e7a57a02">"Update translation documentation" (57d59930)</a>
   
 </div>
 
@@ -17126,19 +17243,19 @@ Otherwise, consider using the <a href="/1.7/development/internationalization/tra
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575546"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575546"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575546"></script>
-    <script src="/js/jquery.sticky.js?1618575546"></script>
-    <script src="/js/featherlight.min.js?1618575546"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575546"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575546"></script>
-    <script src="/js/learn.js?1618575546"></script>
-    <script src="/js/hugo-learn.js?1618575546"></script>
-    <script src="/js/main.js?1618575546"></script>
-
-    <link href="/mermaid/mermaid.css?1618575546" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575546"></script>
+    <script src="/js/clipboard.min.js?1619698200"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698200"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698200"></script>
+    <script src="/js/jquery.sticky.js?1619698200"></script>
+    <script src="/js/featherlight.min.js?1619698200"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698200"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698200"></script>
+    <script src="/js/learn.js?1619698200"></script>
+    <script src="/js/hugo-learn.js?1619698200"></script>
+    
+    <script src="/main.js?1619698200"></script>
+    <link href="/mermaid/mermaid.css?1619698200" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698200"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

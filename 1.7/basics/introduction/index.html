@@ -21,15 +21,16 @@
     <title>Introduction :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575540" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575540" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575540" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575540" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575540" rel="stylesheet">
-    <link href="/css/style.css?1618575540" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698194" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698194" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698194" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698194" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698194" rel="stylesheet">
+    
+    <link href="/style.css?1619698194" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575540"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698194"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575540"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575540"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698194"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698194"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575540"></script>
+<script type="text/javascript" src="/js/search.js?1619698194"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -12692,6 +12735,36 @@
     
   
       
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
     
   
       
@@ -16802,14 +16875,15 @@
 
 <h1 id="fundamentals-of-prestashop-development">Fundamentals of PrestaShop Development</h1>
 <p>PrestaShop was conceived so that third-party modules could easily build upon its foundations, making it an extremely customizable e-commerce software.</p>
-<p>PrestaShop’s customization is based on three possibilities:</p>
+<p>PrestaShop’s customization is based on four possibilities:</p>
 <ul>
 <li>Themes,</li>
 <li>Modules,</li>
+<li>Hooks,</li>
 <li>Overriding.</li>
 </ul>
-<p>Themes are explored in full in the Designer Guide.</p>
-<p>Modules and the override system are explored in this Developer Guide, starting with the “Concepts” section below. You can learn more about each in the following chapters:</p>
+<p>Themes are explored in full in the <a href="/1.7/themes/">Themes</a> section.</p>
+<p>Modules, hooks and the override system are explored in this page and in the <a href="/1.7/modules/">Modules</a> section.</p>
 
 <div class="notices note" ><p>By default, PrestaShop is provided with more than 100 modules, enabling you to launch your online business quickly and for free.</p>
 <p>More than 3000 modules are also available <a href="https://addons.prestashop.com/en/2-modules-prestashop">on the Addons marketplace</a>. These additional modules were built by the PrestaShop company or members of the PrestaShop community, and are sold at affordable prices. As a developer, you can also share your modules on this site, and receive 70% of the amounts associated with the sale of your creations. <a href="https://auth.prestashop.com/en/register?lang=en">Sign up now!</a></p>
@@ -16833,7 +16907,9 @@
 <li>View additional items on the site (product selection, etc.).</li>
 <li>Communicate with other e-commerce services (buying guides, payment platforms, logistics, etc.).</li>
 </ul>
-<p>Overriding is a system in itself. PrestaShop uses completely object-oriented code. One of the advantages of this is that, with the right code architecture, you can easily replace or extend parts of the core code with your own custom code, without having to touch the core code. Your code thus overrides the core code, making PrestaShop behave as you prefer it to. It is not recommended to use an override in a module that you intend to distribute (for instance through the PrestaShop Addons marketplace), and they are forbidden in partner modules. Keep them for your own shop.</p>
+<p>Overriding is a system in itself. PrestaShop uses completely object-oriented code. One of the advantages of this is that, with the right code architecture, you can easily replace or extend parts of the core code with your own custom code, without having to touch the core code.</p>
+<p>Your code thus overrides the core code, making PrestaShop behave as you prefer it to.</p>
+<p>It is however not recommended to use an override in a module that you intend to distribute (for instance through the PrestaShop Addons marketplace), and they are forbidden in partner modules. Keep them for your own shop.</p>
 <h2 id="prestashops-technical-architecture">PrestaShop’s technical architecture</h2>
 <h2 id="mvc-as-the-root">MVC as the root</h2>
 <p>Until PrestaShop 1.6, PrestaShop was based on a 3-tier architecture:</p>
@@ -16847,7 +16923,7 @@
 <ul>
 <li>It’s easier to read the software’s code.</li>
 <li>Developers can add and edit code faster.</li>
-<li>Graphic designer and HTML integrators can work with the confines of the /themes folder without having to understand or even read a single line of PHP code.</li>
+<li>Graphic designer and HTML integrators can work with the confines of the <code>/themes</code> folder without having to understand or even read a single line of PHP code.</li>
 <li>Developers can work on additional data and modules that the HTML integrators can make use of.</li>
 </ul>
 <h4 id="model">Model</h4>
@@ -16870,9 +16946,9 @@
 <footer class="article-footer">
 	
 <div>
-  Last updated on October 25, 2020
+  Last updated on April 19, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/21a3a256cfcfeff6078c7b324a92aa2b976f6887">"Improve wording" (21a3a256)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/15b673edc594c04db6c35f3d299baaa6910ed4cc">"Improve sentences and hrefs in Basics section" (15b673ed)</a>
   
 </div>
 
@@ -16893,19 +16969,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575540"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575540"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575540"></script>
-    <script src="/js/jquery.sticky.js?1618575540"></script>
-    <script src="/js/featherlight.min.js?1618575540"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575540"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575540"></script>
-    <script src="/js/learn.js?1618575540"></script>
-    <script src="/js/hugo-learn.js?1618575540"></script>
-    <script src="/js/main.js?1618575540"></script>
-
-    <link href="/mermaid/mermaid.css?1618575540" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575540"></script>
+    <script src="/js/clipboard.min.js?1619698194"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698194"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698194"></script>
+    <script src="/js/jquery.sticky.js?1619698194"></script>
+    <script src="/js/featherlight.min.js?1619698194"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698194"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698194"></script>
+    <script src="/js/learn.js?1619698194"></script>
+    <script src="/js/hugo-learn.js?1619698194"></script>
+    
+    <script src="/main.js?1619698194"></script>
+    <link href="/mermaid/mermaid.css?1619698194" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698194"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

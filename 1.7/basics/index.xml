@@ -13,9 +13,10 @@
       
       <guid>https://devdocs.prestashop.com/1.7/basics/introduction/</guid>
       <description>Fundamentals of PrestaShop Development PrestaShop was conceived so that third-party modules could easily build upon its foundations, making it an extremely customizable e-commerce software.
-PrestaShop’s customization is based on three possibilities:
- Themes, Modules, Overriding.  Themes are explored in full in the Designer Guide.
-Modules and the override system are explored in this Developer Guide, starting with the “Concepts” section below. You can learn more about each in the following chapters:</description>
+PrestaShop’s customization is based on four possibilities:
+ Themes, Modules, Hooks, Overriding.  Themes are explored in full in the Themes section.
+Modules, hooks and the override system are explored in this page and in the Modules section.
+By default, PrestaShop is provided with more than 100 modules, enabling you to launch your online business quickly and for free.</description>
     </item>
     
   </channel>

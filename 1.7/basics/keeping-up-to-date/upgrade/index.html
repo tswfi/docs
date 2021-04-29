@@ -21,15 +21,16 @@
     <title>How to upgrade PrestaShop :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575540" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575540" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575540" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575540" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575540" rel="stylesheet">
-    <link href="/css/style.css?1618575540" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698194" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698194" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698194" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698194" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698194" rel="stylesheet">
+    
+    <link href="/style.css?1619698194" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575540"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698194"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575540"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575540"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698194"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698194"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575540"></script>
+<script type="text/javascript" src="/js/search.js?1619698194"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -10603,6 +10646,7 @@
             <li><a href="#sample-files-cleanup">Sample files cleanup</a></li>
             <li><a href="#turning-on-maintenance-mode">Turning on maintenance mode</a></li>
             <li><a href="#file-copy">File copy</a></li>
+            <li><a href="#disable-cache">Disable cache</a></li>
             <li><a href="#database-upgrade">Database upgrade</a>
               <ul>
                 <li><a href="#execution-log">Execution log</a></li>
@@ -12664,6 +12708,36 @@
       
       
 
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
       
         
     
@@ -16873,6 +16947,8 @@ right before allowing your customers to access it again.</p>
 <h3 id="file-copy">File copy</h3>
 <p>In this step, we &ldquo;upgrade&rdquo; the PrestaShop files by copying the new
 release content in the existing shop.</p>
+<h3 id="disable-cache">Disable cache</h3>
+<p>You may have activated a caching system (eg. memcache) on your shop. In that case, make sure to disable it in &ldquo;Advanced Parameters&rdquo; &gt; &ldquo;Performance&rdquo;. You can enable it again once the upgrade process is done.</p>
 <p><strong>Note about <code>vendor</code> folder</strong>: Previous upgrades of PrestaShop 1.7
 showed that conflicts may occur when merging the new vendor/ folder with
 the old one. To avoid this problem, we recommend to delete this folder
@@ -16979,9 +17055,9 @@ service.</p>
 <footer class="article-footer">
 	
 <div>
-  Last updated on November 24, 2020
+  Last updated on April 24, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/e2b124a9fcb6849fa0f3b22a4e939de1118e1044">"Split Upgrade details in 2 pages ; one for module" (e2b124a9)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/aebcaeb11973130a5a92f73d15fd760271b20946">"Add note about cache" (aebcaeb1)</a>
   
 </div>
 
@@ -17002,19 +17078,19 @@ service.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575540"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575540"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575540"></script>
-    <script src="/js/jquery.sticky.js?1618575540"></script>
-    <script src="/js/featherlight.min.js?1618575540"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575540"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575540"></script>
-    <script src="/js/learn.js?1618575540"></script>
-    <script src="/js/hugo-learn.js?1618575540"></script>
-    <script src="/js/main.js?1618575540"></script>
-
-    <link href="/mermaid/mermaid.css?1618575540" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575540"></script>
+    <script src="/js/clipboard.min.js?1619698194"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698194"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698194"></script>
+    <script src="/js/jquery.sticky.js?1619698194"></script>
+    <script src="/js/featherlight.min.js?1619698194"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698194"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698194"></script>
+    <script src="/js/learn.js?1619698194"></script>
+    <script src="/js/hugo-learn.js?1619698194"></script>
+    
+    <script src="/main.js?1619698194"></script>
+    <link href="/mermaid/mermaid.css?1619698194" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698194"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

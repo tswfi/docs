@@ -21,15 +21,16 @@
     <title>Database structure :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575544" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575544" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575544" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575544" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575544" rel="stylesheet">
-    <link href="/css/style.css?1618575544" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698198" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698198" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698198" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698198" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698198" rel="stylesheet">
+    
+    <link href="/style.css?1619698198" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575544"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698198"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575544"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575544"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698198"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698198"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575544"></script>
+<script type="text/javascript" src="/js/search.js?1619698198"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -12707,6 +12750,36 @@
     
   
       
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
     
   
       
@@ -16823,15 +16896,16 @@
 It contains the structure of almost all tables. If a table needs to be added or
 modified, this the file you should open.</p>
 <h3 id="table-in-db-but-not-in-db_structuresql">Table in DB but not in db_structure.sql</h3>
-<p>With PrestaShop 1.7, some tables have been migrated to doctrine entities
+<p>With PrestaShop 1.7, some tables are now linked to <a href="https://www.doctrine-project.org/">Doctrine</a> entities
 (i.e stocks). If their <code>ObjectModel</code> (= legacy) equivalent does not exist,
 the entity is probably only managed by Doctrine.</p>
 <p>In that case, updating the table can be done by modifying the related entity
 stored in <code>src/PrestaShopBundle/Entity/</code>.</p>
 <h2 id="database-content">Database content</h2>
 <p>The default database content is stored in XML files in <code>install/data/xml/</code>.
-There is one file per entity (= table).</p>
+There is one file per entity (= table). XML files are structured following ObjectModel structure.</p>
 <p>These files are used during the PrestaShop installation as well.</p>
+<p>Another file is being used to load data during the install process: <code>install/data/db_data.sql</code>. Some versions of PrestaShop do not use it so you might not always find it in the ZIP archive.</p>
 <h2 id="structure-and-content-upgrades">Structure and content upgrades</h2>
 <h3 id="defining-changes">Defining changes</h3>
 <p>Once PrestaShop is installed, the default structure and content files we saw
@@ -16840,7 +16914,7 @@ are not used anymore.</p>
 upgrade file must be created along the <code>db_structure.sql</code> update. This SQL
 file will be stored in the folder <code>/install/upgrade/sql/</code>.</p>
 <p>Its name is the PS version on which the change will be applied.</p>
-<p>For instance, here is the file <em><a href="https://github.com/PrestaShop/PrestaShop/blob/1.7.3.x/install-dev/upgrade/sql/1.7.3.0.sql">1.7.3.0.sql</a></em>,
+<p>For instance, here is the file <em><a href="https://github.com/PrestaShop/PrestaShop/blob/1.7.3.0/install-dev/upgrade/sql/1.7.3.0.sql">1.7.3.0.sql</a></em>,
 used by shops upgrading to 1.7.3.0 or later:</p>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="p">[...]</span>
 <span class="k">UPDATE</span> <span class="o">`</span><span class="n">PREFIX_tab</span><span class="o">`</span> <span class="k">SET</span> <span class="o">`</span><span class="k">position</span><span class="o">`</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">WHERE</span> <span class="o">`</span><span class="n">class_name</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;AdminZones&#39;</span> <span class="k">AND</span> <span class="o">`</span><span class="k">position</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span><span class="p">;</span>
@@ -16866,7 +16940,7 @@ the same name as we saw in the SQL upgrade file.</p>
 </span><span class="c1"></span>  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div><p>PrestaShop does not expect these functions to return anything. It will always
-consider it went well.</p>
+consider it was run without failure.</p>
 <h3 id="applying-changes">Applying changes</h3>
 <p>Applying the changes on your database can be done:</p>
 <ul>
@@ -16877,7 +16951,7 @@ the PHP script <code>install/upgrade/upgrade.php</code></li>
 <p>PrestaShop lists the upgrade files waiting to be applied, by selecting the names
 fitting between the configuration property <code>PS_VERSION_DB</code> and the constant
 <code>_PS_INSTALL_VERSION_</code> defined in <code>install/install_version.php</code>.</p>
-<p>In the first part of this article, we talked about entities being managed only by
+<p>In the top of this page, we talked about entities being managed only by
 Doctrine. Applying the changes on the database is done with the following command:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">php bin/console prestashop:schema:update-without-foreign
 </code></pre></div>
@@ -16891,9 +16965,9 @@ Doctrine. Applying the changes on the database is done with the following comman
 <footer class="article-footer">
 	
 <div>
-  Last updated on June 16, 2020
+  Last updated on April 19, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/9bf3ecbec1491aed5e3d43a44496c9e0c96e2e34">"Use native syntax highlighter &#43; fix highlight for PHP blocks" (9bf3ecbe)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/ef4ae5e8b2d72bfaf7fd477bbfef3a1ec2493d59">"Apply suggestions from code review" (ef4ae5e8)</a>
   
 </div>
 
@@ -16914,19 +16988,19 @@ Doctrine. Applying the changes on the database is done with the following comman
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575544"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575544"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575544"></script>
-    <script src="/js/jquery.sticky.js?1618575544"></script>
-    <script src="/js/featherlight.min.js?1618575544"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575544"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575544"></script>
-    <script src="/js/learn.js?1618575544"></script>
-    <script src="/js/hugo-learn.js?1618575544"></script>
-    <script src="/js/main.js?1618575544"></script>
-
-    <link href="/mermaid/mermaid.css?1618575544" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575544"></script>
+    <script src="/js/clipboard.min.js?1619698198"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698198"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698198"></script>
+    <script src="/js/jquery.sticky.js?1619698198"></script>
+    <script src="/js/featherlight.min.js?1619698198"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698198"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698198"></script>
+    <script src="/js/learn.js?1619698198"></script>
+    <script src="/js/hugo-learn.js?1619698198"></script>
+    
+    <script src="/main.js?1619698198"></script>
+    <link href="/mermaid/mermaid.css?1619698198" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698198"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

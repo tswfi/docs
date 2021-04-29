@@ -21,15 +21,16 @@
     <title>Basic checks :: PrestaShop Developer Documentation</title>
 
     
-    <link href="/css/font-awesome.min.css?1618575546" rel="stylesheet">
-    <link href="/css/syntax-github.css?1618575546" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1618575546" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1618575546" rel="stylesheet">
-    <link href="/css/auto-complete.css?1618575546" rel="stylesheet">
-    <link href="/css/style.css?1618575546" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1619698200" rel="stylesheet">
+    <link href="/css/syntax-github.css?1619698200" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619698200" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619698200" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619698200" rel="stylesheet">
+    
+    <link href="/style.css?1619698200" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1618575546"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619698200"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1618575546"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1618575546"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619698200"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619698200"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1618575546"></script>
+<script type="text/javascript" src="/js/search.js?1619698200"></script>
 
     
   </div>
@@ -3587,9 +3588,51 @@
  
   
     
+      <li data-nav-id="/1.7/development/internationalization/translation/introduction/" title="Introduction to translation" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/introduction/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/1.7/development/internationalization/translation/translation-domains/" title="Translation Domains" class="dd-item ">
         <a href="/1.7/development/internationalization/translation/translation-domains/">
         Translation Domains
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/1.7/development/internationalization/translation/using-the-translator/" title="Using the Translator to translate wordings" class="dd-item ">
+        <a href="/1.7/development/internationalization/translation/using-the-translator/">
+        Using the Translator
         
         </a>
     </li>
@@ -10598,6 +10641,11 @@
       <ul>
         <li><a href="#syntax-check">Syntax check</a></li>
         <li><a href="#coding-standards">Coding standards</a></li>
+        <li><a href="#license-headers">License headers</a>
+          <ul>
+            <li><a href="#example">Example</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -12638,6 +12686,36 @@
       
       
 
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
+      
+        
+    
+    
+      
+        
+      
+      
+      
+      
+      
+
+      
+    
+  
       
         
     
@@ -16850,14 +16928,31 @@ Using cache file &#34;.php_cs.cache&#34;.
    1) controllers/front/TheController.php
 
 Checked all files in 0.085 seconds, 12.000 MB memory used
+</code></pre></div><h2 id="license-headers">License headers</h2>
+<p>When the extension is open-source, sharing the license is one important task.</p>
+<p><a href="https://github.com/PrestaShopCorp/header-stamp">Header-Stamp</a> is a tool that applies a header on all compatible files (PHP, JS&hellip;).
+In these headers, details can be found about the author, the license, the original year of publication.
+One command will apply the license header to all your files, or update it as necessary.</p>
+<p>This tool is part of <code>prestashop/php-dev-tools</code> available on <a href="https://packagist.org/packages/prestashop/php-dev-tools">Packagist</a>, which can be required via composer.</p>
+<h3 id="example">Example</h3>
+<p>In the following example, the AFL license is going to be applied on a module.</p>
+<p>The Header-Stamp package already includes an AFL template, so we can use that one. We also have a few folders that we will want to ignore: <code>vendor</code> (because libraries have their own license), <code>test</code>, and <code>_dev</code> (because they won&rsquo;t be part of the release package).</p>
+<p>To install and use the tool:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Install header-stamp</span>
+composer require --dev prestashop/php-dev-tools
+
+<span class="c1"># Apply header block</span>
+php vendor/bin/header-stamp --license<span class="o">=</span>vendor/prestashop/header-stamp/assets/afl.txt --exclude<span class="o">=</span>vendor,tests,_dev
+</code></pre></div><p>To return the list of files that would be updated because their header block is missing or different from the one to apply, use the <code>--dry-run</code> parameter:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">php vendor/bin/header-stamp --license<span class="o">=</span>vendor/prestashop/header-stamp/assets/afl.txt --exclude<span class="o">=</span>vendor,tests,_dev --dry-run
 </code></pre></div>
 
 <footer class="article-footer">
 	
 <div>
-  Last updated on May 18, 2020
+  Last updated on April 23, 2021
   :
-  <a href="https://github.com/PrestaShop/docs/commit/8086969b26d352449750766e4c845ff181bfb01a">"Apply suggestions from code review" (8086969b)</a>
+  <a href="https://github.com/PrestaShop/docs/commit/531aa8cea11788e779d51e961aefca16eacc9370">"Apply suggestions from code review" (531aa8ce)</a>
   
 </div>
 
@@ -16878,19 +16973,19 @@ Checked all files in 0.085 seconds, 12.000 MB memory used
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1618575546"></script>
-    <script src="/js/perfect-scrollbar.min.js?1618575546"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1618575546"></script>
-    <script src="/js/jquery.sticky.js?1618575546"></script>
-    <script src="/js/featherlight.min.js?1618575546"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1618575546"></script>
-    <script src="/js/modernizr.custom-3.6.0.js?1618575546"></script>
-    <script src="/js/learn.js?1618575546"></script>
-    <script src="/js/hugo-learn.js?1618575546"></script>
-    <script src="/js/main.js?1618575546"></script>
-
-    <link href="/mermaid/mermaid.css?1618575546" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1618575546"></script>
+    <script src="/js/clipboard.min.js?1619698200"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619698200"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619698200"></script>
+    <script src="/js/jquery.sticky.js?1619698200"></script>
+    <script src="/js/featherlight.min.js?1619698200"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1619698200"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619698200"></script>
+    <script src="/js/learn.js?1619698200"></script>
+    <script src="/js/hugo-learn.js?1619698200"></script>
+    
+    <script src="/main.js?1619698200"></script>
+    <link href="/mermaid/mermaid.css?1619698200" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1619698200"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

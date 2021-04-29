@@ -24,7 +24,7 @@ Please note that severity is to be distinguished from priority. Indeed, severity
       <guid>https://devdocs.prestashop.com/1.7/contribute/contribution-process/how-pull-requests-are-processed/</guid>
       <description>How Pull Requests are processed All submitted pull requests go through a thorough process which aims to provide a stable, consistent and reliable software that we all know under the name PrestaShop. Here is this process in details.
 Automatic tasks when you open a Pull Request When you submit a new Pull Request to the project repository, some automatic checks are triggered.
-Continuous Integration Four automatic code checker tools are active on the project.</description>
+Continuous Integration The project relies on GitHub Action to perform multiple checks against submitted Pull Requests.</description>
     </item>
     
   </channel>
