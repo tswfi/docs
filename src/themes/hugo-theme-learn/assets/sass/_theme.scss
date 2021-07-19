@@ -27,11 +27,6 @@ a {
   }
 }
 
-pre {
-  position: relative;
-  color: #ffffff;
-}
-
 .bg {
   background: #fff;
   border: 1px solid #eaeaea;
@@ -126,7 +121,7 @@ select[multiple='multiple'] {
   }
 }
 
-.searchbox {
+.searchbox-extended {
   margin-top: 1rem;
   position: relative;
   border: 1px solid #915eae;
@@ -140,11 +135,10 @@ select[multiple='multiple'] {
     top: 3px;
   }
 
-  span {
+  > span {
     color: rgba(255, 255, 255, 0.6);
     position: absolute;
     right: 10px;
-    top: 3px;
     cursor: pointer;
 
     &:hover {
@@ -522,15 +516,28 @@ code {
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
+
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  a &,
+  {
+    background: transparent;
+    font-size: inherit;
+    padding: initial;
+    color: inherit;
+  }
 }
 
 pre {
   padding: 1rem;
-  margin: $paragraphSpacing * 1.5 0;
-  background: #f7f7f8;
+  margin: 0;
   border: 0;
   border-radius: 2px;
   line-height: 1.15;
+
 
   code {
     display: block;
@@ -542,6 +549,13 @@ pre {
     font-size: 14px;
     line-height: 1.45;
   }
+}
+
+div.highlight {
+  margin: $paragraphSpacing * 1.5 0;
+  background: $codeBlockBgColor;
+  overflow-x: auto;
+  position: relative; // needed for the copy code button
 }
 
 hr {
@@ -1015,15 +1029,15 @@ pre {
 }
 
 #body {
-  a.highlight,
-  a.highlight:hover,
-  a.highlight:focus {
+  a,
+  a:hover,
+  a:focus {
     text-decoration: none;
     outline: none;
     outline: 0;
   }
 
-  a.highlight {
+  a {
     line-height: 1.1;
     display: inline-block;
 
@@ -1075,6 +1089,11 @@ pre {
   -webkit-transition: all 0.15s !important;
   -moz-transition: all 0.15s !important;
   transition: all 0.15s !important;
+
+  &:after {
+    // remove underline effect inherited from a
+    content: none !important;
+  }
 
   &:focus {
     outline: none !important;
@@ -1185,5 +1204,27 @@ ol ol {
   list-style-type: lower-alpha;
   ol {
     list-style-type: lower-roman;
+  }
+}
+
+// definition lists
+
+dt {
+  font-weight: bold;
+
+  code {
+    font-weight: normal;
+    font-size: 90%;
+  }
+}
+
+dd {
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  // for some reason, the first paragraph in definitions is not wrapped by a <p>
+  // so there's a margin missing between the first paragraph and one following
+  > p:first-child {
+    margin-top: 1rem;
   }
 }
