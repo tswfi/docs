@@ -132,7 +132,7 @@ To do it: you declare your new service using the 'decorates' keyword. So if you 
     decorates: 'prestashop.core.b2b.b2b_feature'
 ```
 
-That's done. The service registered under the name `prestashop.core.b2b.b2b_feature` is now your service. The previous `prestashop.core.b2b.b2b_feature` implementation is still available under the name `mymodule.my_own_b2b_feature_service.inner`.
+That's done. The service registered under the name `mymodule.my_own_b2b_feature_service` is now your service. The previous `prestashop.core.b2b.b2b_feature` implementation is still available under the name `mymodule.my_own_b2b_feature_service.inner`.
 
 This means that in your container you can access 3 services now:
 
@@ -223,7 +223,7 @@ Your new service, which overrides or decorates the previous service, only needs 
 
 If however no interface was used here, you probably need to `extend` the previous class, `ASpecificClass`, instead.
 
-As you can see, interfaces lay the ground for easy extension and customization, that is why we use them more and more in the Core codebase and we recommand you use them as well !
+As you can see, interfaces lay the ground for easy extension and customization, that is why we use them more and more in the Core codebase and we recommend you use them as well !
 
 ## Services in Legacy environment
 {{< minver v="1.7.6" title="true" >}}

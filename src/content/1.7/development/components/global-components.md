@@ -15,7 +15,7 @@ This object contains two attributes:
 - `component` which contain some components you can instantiate;
 - `instance` which contains every instances of initiated components.
 
-It allows module developers to avoid importing path such as `../../../../admin-dev/themes/new-module/js/components/translatable-field` because it was making hard to add a CI in order to build the module.
+It allows module developers to avoid importing path such as `../../../../admin-dev/themes/new-theme/js/components/translatable-field` because it was making hard to add a CI in order to build the module.
 
 ## How to use
 
@@ -61,3 +61,61 @@ EventEmitter.on('PSComponentsInitiated', () => {
   window.prestashop.component.instance.myCustomComponent = new window.prestashop.component.MyCustomComponent();
 });
 ```
+
+## List of available components 
+
+Component | Version 
+-------- | ---- 
+TranslatableField            | 1.7.8
+TinyMCEEditor                | 1.7.8
+TranslatableInput            | 1.7.8
+TaggableField                | 1.7.8
+ChoiceTable                  | 1.7.8
+EventEmitter                 | 1.7.8
+ChoiceTree                   | 1.7.8
+MultipleChoiceTable          | 1.7.8
+GeneratableInput             | 1.7.8
+CountryStateSelectionToggler | 1.7.8
+CountryDniRequiredToggler    | 1.7.8
+TextWithLengthCounter        | 1.7.8
+MultistoreConfigField        | 1.7.8
+PreviewOpener                | 1.7.8
+Router                       | 1.7.8
+Grid                         | 1.7.8
+ColorPicker                  | 1.7.9
+
+## Grid component
+
+From version 1.7.8 you can access both, Grid component and its extensions, this should make working with modern controllers in your modules much easier.
+
+Component | Version 
+-------- | ---- 
+Grid           | 1.7.8
+GridExtensions | 1.7.8
+
+### Extensions
+
+```js
+const Grid = window.prestashop.component.Grid(gridId);
+const ChoiceExtension = window.prestashop.component.GridExtensions.ChoiceExtension();
+```
+
+Extension | Version 
+-------- | ---- 
+AsyncToggleColumnExtension | 1.7.8
+BulkActionCheckboxExtension | 1.7.8
+BulkOpenTabsExtension | 1.7.8
+ChoiceExtension | 1.7.8
+ColumnTogglingExtension | 1.7.8
+ExportToSqlManagerExtension | 1.7.8
+FiltersResetExtension | 1.7.8
+FiltersSubmitButtonEnablerExtension | 1.7.8
+LinkRowActionExtension | 1.7.8
+ModalFormSubmitExtension | 1.7.8
+PositionExtension | 1.7.8
+PreviewExtension | 1.7.8
+ReloadListExtension | 1.7.8
+SortingExtension | 1.7.8
+SubmitBulkActionExtension | 1.7.8
+SubmitGridActionExtension | 1.7.8
+SubmitRowActionExtension | 1.7.8

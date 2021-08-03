@@ -3,7 +3,7 @@ languageCode: "en-us"
 defaultContentLanguage: "en"
 title: "PrestaShop Developer Documentation"
 
-theme: "hugo-theme-learn"
+theme: "ps-docs-theme"
 enableGitInfo: true
 enableRobotsTXT: true
 googleAnalytics: "UA-2753771-44"
@@ -20,8 +20,13 @@ params:
   projectUrls:
     gitHub: "https://github.com/PrestaShop/PrestaShop/"
     reportBug: "https://github.com/PrestaShop/PrestaShop/issues"
-    slack: "https://github.com/PrestaShop/open-source/blob/master/slack/readme.md"
+    slack: "https://www.prestashop-project.org/slack/readme/"
   coverImage: "images/social-cover.jpg"
+  logoTitle: "PrestaShop DevDocs"
+
+  # Default documentation version
+  versions:
+    current: "1.7"
 
 # For search functionality
 outputs:

@@ -549,7 +549,24 @@ actionFeatureValueSave
 
     Located in: /classes/FeatureValue.php
 
+actionFrontControllerAfterInit
+:  
+    **(Deprecated in 1.7.7 in favor of)**
+    → `actionFrontControllerInitAfter`
     
+actionFrontControllerInitAfter
+: 
+    Available since: {{< minver v="1.7.7" >}}
+    
+    Located in: /classes/controller/FrontController.php
+
+actionFrontControllerInitBefore
+: 
+    Available since: {{< minver v="1.7.7" >}}
+    
+    Located in: /classes/controller/FrontController.php
+
+
 actionFrontControllerSetMedia
 : 
     Located in: /classes/controller/FrontController.php
@@ -826,12 +843,11 @@ WARNING: only invoked when a product is actually removed from an order.
     ```
     
 actionOrderStatusPostUpdate
-: 
+:   
     Called after the status of an order changes.
-    {{% notice tip %}}
-	This hook is fired BEFORE the new OrderStatus is saved into the database.
+        
+    **Note:** This hook is fired BEFORE the new OrderStatus is saved into the database.  
 	If you need to register after this insertion, use `actionOrderHistoryAddAfter` or `actionObjectOrderHistoryAddAfter` instead.
-    {{% /notice %}}
 
     Located in: /classes/order/OrderHistory.php
 
@@ -1102,7 +1118,7 @@ actionValidateCustomerAddressForm
 actionValidateOrder
 : 
     After an order has been validated.
-Doesn't necessarily have to be paid.
+    Doesn't necessarily have to be paid.
 
     Located in: /classes/PaymentModule.php
 
@@ -1117,7 +1133,25 @@ Doesn't necessarily have to be paid.
       'orderStatus' => (object) OrderState
     );
     ```
-    
+
+actionValidateOrderAfter
+:   
+    This hook is called after validating an order by core
+
+    Located in: /classes/PaymentModule.php
+
+    Parameters:
+    ```php
+    <?php
+    array(
+      'cart' => (object) Cart,
+      'order' => (object) Order,
+      'customer' => (object) Customer,
+      'currency' => (object) Currency,
+      'orderStatus' => (object) OrderState
+    );
+    ```
+
 actionValidateStepComplete
 : 
     This hook is called on checkout page, when confirming delivery section. Carrier modules that display extra content to the customer can hook here and prevent him from advancing further, if he didn't enter required information. 
@@ -2547,7 +2581,7 @@ action&lt;HookName>Form
     
     This hook allows to modify options form content
     
-    Located in: /src/Core/Form/FormHandler.php
+    Located in: /src/Core/Form/Handler.php
 
     Parameters:
     ```php
@@ -2563,7 +2597,7 @@ action&lt;HookName>Save
     
     This hook allows to modify data of options form after it was saved
     
-    Located in: /src/Core/Form/FormHandler.php
+    Located in: /src/Core/Form/Handler.php
 
     Parameters:
     ```php

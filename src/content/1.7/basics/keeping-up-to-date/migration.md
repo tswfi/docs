@@ -180,7 +180,7 @@ This tool can be run anywhere, as long as you can access both servers & database
 mysqldiff --server1=user:pass@host:port:socket --server2=user:pass@host:port:socket db3:db4
 ```
 
-You need to provide the credentials to your MySQL servers. Ifthe source and the destination databases are on the same server, the `--server2` parameter can be omitted. `db3` and `db4` are respectively the source and the destination databases of your data.
+You need to provide the credentials to your MySQL servers. If the source and the destination databases are on the same server, the `--server2` parameter can be omitted. `db3` and `db4` are respectively the source and the destination databases of your data.
 
 Getting the structure diff will require additional options, as provided in this example:
 ```bash
@@ -591,7 +591,7 @@ missing product to the index”.
 
 ## Other migration options for developers
 
-The manual process explained to export and import data with CSV files
+The manual process explained how to export and import data with CSV files
 from database. If you are a developer and you are willing to build your
 own tools for migrations, other ways exist to get the business data.
 
@@ -608,7 +608,7 @@ developers to request the database.
 This can be used while developing a module responsible of the export
 and/or import of the objects from/to the database.
 
-For more details, see the page dedicated to [ObjectModels]({{< ref "1.7/development/database/objectmodel" >}})
+For more details, see the page dedicated to [ObjectModels]({{< ref "1.7/development/components/database/objectmodel" >}})
 
 ### Web service (API)
 

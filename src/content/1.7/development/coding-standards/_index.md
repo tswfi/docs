@@ -21,6 +21,17 @@ All files containing code MUST:
 * Use the Unix LF (linefeed) line ending.
 * End with a single blank line.
 
+### Code documentation
+
+Make sure that **classes**, **attributes** and **methods** are properly documented using doc blocks, regardless of visibility. As a rule of thumb, consider that a developer should be able to understand a component and use it without even having to read the source code – signatures and doc blocks should suffice for most cases.
+
+Pay particular attention to the following:
+
+- **Describe the class's purpose.** If you have a hard time describing what the class is meant for, it may be a sign that it has too many responsibilites and needs to be decomposed.
+- **Describe intent, not implementation.** Explain what the method/class is for, not how it performs it—unless that information is important for the developer using it.
+- **Document attributes, parameters and return values both in type and semantics.** A variable named `$content` might be obviously a string, but we need more context to understand what its purpose is.
+- **It is preferable to waste time describing the obvious than to leave the ambiguous open to interpretation.** This prevents more bugs than you can imagine.
+
 ## PHP code conventions
 
 PHP files MUST follow the [PSR-2 standard](https://www.php-fig.org/psr/psr-2/) alongside [Symfony standards](https://symfony.com/doc/3.4/contributing/code/standards.html#structure).
@@ -39,6 +50,25 @@ php ./vendor/bin/php-cs-fixer fix
 ```
 
 The prestashop specific configuration file [can be found here](https://github.com/PrestaShop/PrestaShop/blob/develop/.php_cs.dist). Also, you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/develop/.github/contrib) sample in order to make sure you never forget to make your code compliant!
+
+### Documenting types
+
+Parameters and return values SHOULD be described using Phpdoc as [documented by Phpstan](https://phpstan.org/writing-php-code/phpdoc-types), especially when the type cannot be strictly defined using PHP types (e.g. collections, structs, mixed types).
+
+Example:
+
+```php
+/**
+ * @var string[] Collection of IETF language tag (eg. "en-US")
+ */
+public $locales;
+```
+
+Particular attention should be paid to documenting arrays and array structures:
+
+- Use the simplified syntax for collections, like `string[]` or `SomeType[]`.
+- If the array's index is relevant (e.g., non-sequential), use the generics-style annotation, like `array<int, string>`.
+- If the array is actually a struct (i.e. an associative array whose schema is known), then it MUST be described it using the [array shape annotation](https://phpstan.org/writing-php-code/phpdoc-types#array-shapes), like `array{'foo': int, "bar": string}`.
 
 ### Strict typing
 {{< minver v="1.7.7" title="true" >}}
@@ -106,10 +136,23 @@ class MyClass
 }
 ```
 
+If you need to deprecate services, you can use the `deprecated` key for the service:
+```yml
+    awesome.path.myclass:
+        class: 'PrestaShop\Awesome\Path\MyClass'
+        deprecated: 'The "%service_id%" service is deprecated since 1.7.8.0 and will be removed in next major.'
+        public: true
+```
+
 ## Javascript code conventions
 
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
 
+Starting on {{< minver v="1.7.8" >}}, you can run the linter to help you comply with these coding standards:
+
+```bash
+npm run lint-fix
+```
 ## HTML, CSS (Sass), Twig & Smarty code conventions
 
 HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](https://codeguide.co/).

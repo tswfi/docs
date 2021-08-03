@@ -9,6 +9,14 @@ weight: 30
 
 By default, PrestaShop’s database tables start with the `ps_` prefix. This can be customized during installation
 
+{{% notice warning %}}
+**Important**
+
+For security reasons We strongly recommend to customize your database prefix instead of using the default one.
+Changing it will help protect your shop against any attacks (some SQL injection for example) targeting the default table names
+
+{{% /notice %}}
+
 All table names are in lowercase, and words are separated with an underscore character (“_”):
 
 * ps_employee
@@ -28,3 +36,9 @@ There is also a couple of standard practices for data rows within a table:
 
 * Use the `id_lang` field to store the language associated with a record.
 * Use the `id_shop` field to store the store associated with a record.
+
+## Accessing the database
+
+The preferred way to access the database is through the [Db component][db-component].
+
+[db-component]: {{< ref "../components/database/db" >}}
